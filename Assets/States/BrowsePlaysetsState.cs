@@ -9,6 +9,9 @@ public class PlaysetsState : State {
 		base.Enter (context);
 		menuPanel = context.manager.playsetsMenu;
 		//generate buttons linking to playset viewer state
+		var table = menuPanel.GetComponent<UITable>();
+		//get playset info from service (context)
+		
 	}
 	
 	public override void Exit ()
