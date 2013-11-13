@@ -4,7 +4,7 @@ using System.Collections.Generic;
 
 public class PlaysetManager : MonoBehaviour {
 
-	private List<Playset> playsets;
+	public List<Playset> playsets;
 	
 	void Start() {
 		LoadPlaysetsFromFile();
