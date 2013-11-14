@@ -9,7 +9,9 @@ public abstract class State {
 	
 	public virtual void Enter(StateContext context) {
 		initialContext = context;
-		context.manager.currentState.Exit();
+		if (context.manager.currentState != null) {
+			context.manager.currentState.Exit();
+		}
 		context.manager.currentState = this;
 	}
 	

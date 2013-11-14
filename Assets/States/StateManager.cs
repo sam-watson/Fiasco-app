@@ -1,4 +1,5 @@
 using UnityEngine;
+using System;
 using System.Collections;
 
 public class StateManager : MonoBehaviour {
@@ -14,13 +15,15 @@ public class StateManager : MonoBehaviour {
 	private static StateManager _Instance;
 	public static StateManager Instance {
 		get {
-			if (_Instance == null) 
-				throw new System.Exception("StateManager is null");
 			return _Instance;
 		}
 	}
 	
 	void Start() {
+		if (Instance != null) {
+			throw new Exception("Attempted to create more than one instance of StateManager");
+		}
+		_Instance = this;
 		playsetManager = gameObject.AddComponent<PlaysetManager>();
 		new BrowsePlaysetsState().Enter(new StateContext());
 	}
