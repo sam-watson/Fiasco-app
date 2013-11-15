@@ -2,7 +2,7 @@
 using System.Collections;
 using System.Collections.Generic;
 
-public class Playset : MonoBehaviour {
+public class Playset {
 
 	public string name;
 	public string summary;
