@@ -10,6 +10,8 @@ public class Playset {
 	public Texture2D thumbImage;
 	public PlaysetElements elements;
 	
+	public Playset() {}
+	
 	public Playset(string name, string summary, string coverImg, string thumbImg, PlaysetElements elements) {
 		this.name = name;
 		this.summary = summary;
@@ -18,28 +20,28 @@ public class Playset {
 		this.elements = elements;
 	}
 	
-	// JSON to class conversion
-	public static explicit operator Playset(JSON value) {
-		checked {
-			return new Playset(
-				value.ToString("name"),
-				value.ToString("summary"),
-				value.ToString("coverImage"),
-				value.ToString("thumbImage"),
-				(PlaysetElements)value.ToJSON("elements"));
-		}
-	}
-	
-	// convert a JSON array to a class Array
-	public static Playset[] Array(JSON[] array) {
-		List<Playset> tc = new List<Playset>();
-		for (int i=0; i<array.Length; i++) {
-			tc.Add((Playset)array[i]);
-		}
-		return tc.ToArray();
-	}
-	
-	//serializer - not sure if needed, done for practice
+//	// JSON to class conversion
+//	public static explicit operator Playset(JSON value) {
+//		checked {
+//			return new Playset(
+//				value.ToString("name"),
+//				value.ToString("summary"),
+//				value.ToString("coverImage"),
+//				value.ToString("thumbImage"),
+//				(PlaysetElements)value.ToJSON("elements"));
+//		}
+//	}
+//	
+//	// convert a JSON array to a class Array
+//	public static Playset[] Array(JSON[] array) {
+//		List<Playset> tc = new List<Playset>();
+//		for (int i=0; i<array.Length; i++) {
+//			tc.Add((Playset)array[i]);
+//		}
+//		return tc.ToArray();
+//	}
+//	
+//	//serializer - not sure if needed, done for practice
 //	public static implicit operator JSON(Playset value) {
 //		JSON js = new JSON();
 //		js["name"] = value.name;
