@@ -17,7 +17,9 @@ public class Button : MonoBehaviour {
 				uiButton.onClick.Remove(_onClick);
 			}
 			_onClick = value;
-			uiButton.onClick.Add(_onClick);
+			if (uiButton != null) {
+				uiButton.onClick.Add(_onClick);
+			}
 		}
 	}
 	
@@ -57,5 +59,6 @@ public class Button : MonoBehaviour {
 		uiLabel = GetComponentInChildren<UILabel>();
 		IsEnabled = IsEnabled;
 		LabelText = LabelText;
+		OnClick = OnClick;
 	}
 }

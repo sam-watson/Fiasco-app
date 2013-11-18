@@ -10,7 +10,7 @@ public class BrowsePlaysetsState : State {
 		menuPanel = context.manager.playsetsMenu;
 		menuPanel.SetActive(true);
 		//generate buttons linking to playset viewer state
-		var table = menuPanel.GetComponentInChildren<UITable>();
+		var table = menuPanel.GetComponentInChildren<UIGrid>();
 		//get playset info from service (context)
 		foreach (Playset playset in context.playsets.playsets) {
 			var buttonObj = (GameObject) Object.Instantiate(context.manager.playsetButton);
