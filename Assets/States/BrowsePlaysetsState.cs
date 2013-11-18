@@ -8,8 +8,9 @@ public class BrowsePlaysetsState : State {
 	{
 		base.Enter (context);
 		menuPanel = context.manager.playsetsMenu;
+		menuPanel.SetActive(true);
 		//generate buttons linking to playset viewer state
-		var table = menuPanel.GetComponent<UITable>();
+		var table = menuPanel.GetComponentInChildren<UITable>();
 		//get playset info from service (context)
 		foreach (Playset playset in context.playsets.playsets) {
 			var buttonObj = (GameObject) Object.Instantiate(context.manager.playsetButton);
@@ -18,6 +19,7 @@ public class BrowsePlaysetsState : State {
 			button.LabelText = playset.name;
 			button.OnClick = new EventDelegate(GoToViewPlaysetState);
 		}
+		table.Reposition();
 	}
 	
 	public override void Exit ()
