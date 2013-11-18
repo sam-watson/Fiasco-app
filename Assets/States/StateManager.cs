@@ -5,6 +5,7 @@ using System.Collections;
 public class StateManager : MonoBehaviour {
 	
 	public GameObject playsetsMenu;
+	public GameObject logoPanel;
 	
 	public GameObject playsetButton;
 	
@@ -25,6 +26,15 @@ public class StateManager : MonoBehaviour {
 		}
 		_Instance = this;
 		playsetManager = gameObject.AddComponent<PlaysetManager>();
-		new BrowsePlaysetsState().Enter(new StateContext());
+		new WaitingState().Enter(new StateContext());
+	}
+	
+	public void WaitForIt(float time, EventDelegate it) {
+		StartCoroutine(WaitingForIt(time, it));
+	}
+	
+	private IEnumerator WaitingForIt(float time, EventDelegate it) {
+		yield return new WaitForSeconds(time);
+		it.Execute();
 	}
 }

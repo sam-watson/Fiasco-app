@@ -13,10 +13,12 @@ public abstract class State {
 			context.manager.currentState.Exit();
 		}
 		context.manager.currentState = this;
+		Debug.Log("Entering " + this.GetType());
 	}
 	
 	public virtual void Exit() {
-		menuPanel.SetActive(false);
+		if (menuPanel != null)
+			menuPanel.SetActive(false);
 	}
 }
 
