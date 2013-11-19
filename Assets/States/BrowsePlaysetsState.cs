@@ -17,6 +17,7 @@ public class BrowsePlaysetsState : State {
 			var buttonTrans = buttonObj.transform;
 			buttonTrans.parent = grid.transform;
 			grid.cellHeight = NGUIMath.CalculateAbsoluteWidgetBounds(buttonTrans).size.y +5;
+			buttonObj.AddComponent<UIDragPanelContents>();
 			var button = buttonObj.AddComponent<Button>();
 			button.LabelText = playset.name;
 			button.OnClick = new EventDelegate(GoToViewPlaysetState);
