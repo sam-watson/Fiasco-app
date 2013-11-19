@@ -10,16 +10,18 @@ public class BrowsePlaysetsState : State {
 		menuPanel = context.manager.playsetsMenu;
 		menuPanel.SetActive(true);
 		//generate buttons linking to playset viewer state
-		var table = menuPanel.GetComponentInChildren<UIGrid>();
+		var grid = menuPanel.GetComponentInChildren<UIGrid>();
 		//get playset info from service (context)
 		foreach (Playset playset in context.playsets.playsets) {
 			var buttonObj = (GameObject) Object.Instantiate(context.manager.playsetButton);
-			buttonObj.transform.parent = table.transform;
+			var buttonTrans = buttonObj.transform;
+			buttonTrans.parent = grid.transform;
+			grid.cellHeight = NGUIMath.CalculateAbsoluteWidgetBounds(buttonTrans).size.y +5;
 			var button = buttonObj.AddComponent<Button>();
 			button.LabelText = playset.name;
 			button.OnClick = new EventDelegate(GoToViewPlaysetState);
 		}
-		table.Reposition();
+		grid.Reposition();
 	}
 	
 	public override void Exit ()
