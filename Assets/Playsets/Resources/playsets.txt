@@ -1,5 +1,4 @@
 {
 "playsets" : [
-	"Flyover",
-	"Manna Hotel"
+	"Flyover"
 ]}

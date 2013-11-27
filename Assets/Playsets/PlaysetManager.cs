@@ -27,8 +27,8 @@ public class PlaysetManager : MonoBehaviour {
 			var playsetName = playsetData["playsets"][i].ToString();
 			var playset = new Playset();
 			playset.name = playsetName;
-			var summary = (TextAsset)Resources.Load(playsetName + "/" + playsetName);
-			//playset.summary = summary.text;
+			var infoText = (TextAsset)Resources.Load(playsetName + "/" + playsetName);
+			playset.info = JsonMapper.ToObject<PlaysetInfo>(infoText.text);
 			//images
 			playsets.Add(playset);
 			Debug.Log(playsets.IndexOf(playset) + ": " + playset.name);

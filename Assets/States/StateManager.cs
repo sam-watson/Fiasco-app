@@ -1,22 +1,32 @@
 using UnityEngine;
 using System;
 using System.Collections;
+using System.Collections.Generic;
 
 public class StateManager : MonoBehaviour {
 	
-	public GameObject playsetsMenu;
-	public GameObject logoPanel;
+	public GameObject browserPanel;
+	public GameObject viewerPanel;
 	
 	public GameObject playsetButton;
+	public GameObject playsetLabel;
 	
-	public PlaysetManager playsetManager;
-	
+	private PlaysetManager playsetManager;
 	[HideInInspector] public State currentState;
 	
 	private static StateManager _Instance;
 	public static StateManager Instance {
 		get {
 			return _Instance;
+		}
+	}
+	
+	private List<Playset> _playsets;
+	public List<Playset> Playsets {
+		get {
+			if (playsetManager != null) {
+				return playsetManager.playsets;
+			} else throw new Exception("No playset manager is set");
 		}
 	}
 	

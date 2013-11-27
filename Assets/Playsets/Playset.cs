@@ -5,20 +5,18 @@ using System.Collections.Generic;
 public class Playset {
 
 	public string name;
-	public string summary;
+	public PlaysetInfo info;
+	public PlaysetElements elements;
 	public Texture2D coverImage;
 	public Texture2D thumbImage;
-	public PlaysetElements elements;
+}
+
+public class PlaysetInfo {
 	
-	public Playset() {}
-	
-	public Playset(string name, string summary, string coverImg, string thumbImg, PlaysetElements elements) {
-		this.name = name;
-		this.summary = summary;
-		this.coverImage = (Texture2D)Resources.Load(coverImg);
-		this.thumbImage = Resources.Load(thumbImg) as Texture2D;
-		this.elements = elements;
-	}
+	public string subtitle;
+	public string summary;
+	public string movienight;
+	public string credits;
 }
 
 public class PlaysetElements {
@@ -28,9 +26,8 @@ public class PlaysetElements {
 	public Dictionary<string, List<string>> locations;
 	public Dictionary<string, List<string>> objects;
 	
-	public PlaysetElements(Dictionary<string, List<string>> relationships, Dictionary<string, List<string>> needs,
-		Dictionary<string, List<string>> locations, Dictionary<string, List<string>> objects) {
-		this.relationships = relationships;
-	}
-	
+//	public PlaysetElements(Dictionary<string, List<string>> relationships, Dictionary<string, List<string>> needs,
+//		Dictionary<string, List<string>> locations, Dictionary<string, List<string>> objects) {
+//		this.relationships = relationships;
+//	}
 }

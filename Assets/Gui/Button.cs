@@ -13,7 +13,7 @@ public class Button : MonoBehaviour {
 			return _onClick;
 		}
 		set {
-			if (_onClick != null) {
+			if (_onClick != null && uiButton != null) {
 				uiButton.onClick.Remove(_onClick);
 			}
 			_onClick = value;

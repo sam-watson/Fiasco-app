@@ -25,10 +25,14 @@ public abstract class State {
 public class StateContext {
 	
 	public StateManager manager;
-	public PlaysetManager playsets;
+	public Playset playset;
 	
 	public StateContext() {
 		manager = StateManager.Instance;
-		playsets = manager.playsetManager;
+	}
+	
+	public StateContext(Playset playset) {
+		manager = StateManager.Instance;
+		this.playset = playset;
 	}
 }
