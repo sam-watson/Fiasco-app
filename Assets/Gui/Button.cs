@@ -39,6 +39,9 @@ public class Button : MonoBehaviour {
 	private string _labelText;
 	public string LabelText {
 		get {
+			if (uiLabel != null) {
+				_labelText = uiLabel.text;
+			}
 			return _labelText;
 		}
 		set {
