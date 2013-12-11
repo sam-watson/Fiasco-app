@@ -29,6 +29,11 @@ public class BrowsePlaysetsState : State {
 			buttonObj.AddComponent<UIDragPanelContents>();
 			var button = buttonObj.AddComponent<PlaysetButton>();
 			button.Playset = playset;
+			button.IsEnabled = true;
+		}
+		while ( i < gridTrans.childCount) {
+			gridTrans.GetChild(i).GetComponentInChildren<Button>().IsEnabled = false;
+			i++;
 		}
 		grid.Reposition();
 	}
