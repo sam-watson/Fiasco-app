@@ -5,36 +5,36 @@ using System.Collections.Generic;
 public class PageMap : MonoBehaviour {
 	
 	//anchors
-	public GameObject head;
-	public GameObject body;
-	public GameObject foot;
-	public GameObject topLeft;
-	public GameObject topRight;
-	public GameObject bottomLeft;
-	public GameObject bottomRight;
+	public UIAnchor head;
+	public UIAnchor body;
+	public UIAnchor foot;
 	
-	public GameObject subPage;
+	private List<UIAnchor> anchors = new List<UIAnchor>();
+	private Transform trans;
 	
-	void Awake() {
-		var anchors = gameObject.GetComponentsInChildren<UIAnchor>();
-		var trans = transform;
+	
+	public virtual void Awake() {
+		trans = transform;
+		var allAnchors = gameObject.GetComponentsInChildren<UIAnchor>();
 		Debug.Log("Adjusting anchors");
-		foreach (var anchor in anchors) {
-			if (anchor.transform.parent == trans && anchor.gameObject != body) {
+		foreach (var anchor in allAnchors) {
+			if (anchor.transform.parent == trans && anchor != body) {
+				anchors.Add(anchor);
 				CorrectOffsets(anchor);
 			}
 		}
 	}
 	
-	public UILabel AddLabel(GameObject labelPrefab, GameObject anchor) {
-		var label = NGUITools.AddChild(labelPrefab, anchor).GetComponent<UILabel>();
+	public virtual UILabel AddLabel(UIAnchor anchor, GameObject prefab) {
+		var label = NGUITools.AddChild(anchor.gameObject, prefab).GetComponent<UILabel>();
+		label.pivot = UIWidget.Pivot.Left;
 		if (anchor != body) {
-			CorrectOffsets(anchor.GetComponent<UIAnchor>());
+			CorrectOffsets(anchor);
 		}
 		return label;
 	}
 	
-	private void CorrectOffsets(UIAnchor anchor) {
+	protected void CorrectOffsets(UIAnchor anchor) {
 		var bounds = NGUIMath.CalculateRelativeWidgetBounds(anchor.transform);
 		var anchorPos = anchor.side.ToString();
 		if (anchorPos.Contains("Left")) {
@@ -49,13 +49,12 @@ public class PageMap : MonoBehaviour {
 		}
 	}
 	
-	public void ClearAll() {}
-}
-
-public class PlaysetViewerSubPage {
-	
-	void Awake() {
-		
+	public UIAnchor GetAnchor(UIAnchor.Side side) {
+		foreach (var anchor in anchors) {
+			if (anchor.side == side)
+				return anchor;
+		}
+		UIAnchor sorry = null;
+		return sorry;
 	}
-	
 }

@@ -7,9 +7,11 @@ public class StateManager : MonoBehaviour {
 	
 	public GameObject browserPanel;
 	public GameObject viewerPanel;
+	public Prefabs prefabs;
 	
-	public GameObject playsetButton;
-	public GameObject playsetLabel;
+//	public GameObject playsetButtonPrefab;
+//	public GameObject playsetLabelPrefab;
+//	public GameObject playsetSubPagePrefab;
 	
 	private PlaysetManager playsetManager;
 	[HideInInspector] public State currentState;

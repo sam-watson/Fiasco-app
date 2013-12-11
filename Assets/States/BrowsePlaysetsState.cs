@@ -13,7 +13,7 @@ public class BrowsePlaysetsState : State {
 		var grid = menuPanel.GetComponentInChildren<UIGrid>();
 		//get playset info from service (context)
 		foreach (Playset playset in context.manager.Playsets) {
-			var buttonObj = (GameObject) Object.Instantiate(context.manager.playsetButton);
+			var buttonObj = (GameObject) Object.Instantiate(context.manager.prefabs.playsetButton);
 			var buttonTrans = buttonObj.transform;
 			buttonTrans.parent = grid.transform;
 			grid.cellHeight = NGUIMath.CalculateAbsoluteWidgetBounds(buttonTrans).size.y +5;
