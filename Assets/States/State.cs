@@ -7,6 +7,8 @@ public abstract class State {
 	public GameObject menuPanel;
 	public StateContext initialContext;
 	
+	protected PageMap pageMap;
+	
 	public virtual void Enter(StateContext context) {
 		initialContext = context;
 		if (context.manager.currentState != null) {

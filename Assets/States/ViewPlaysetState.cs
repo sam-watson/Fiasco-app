@@ -12,8 +12,8 @@ public class ViewPlaysetState : State {
 		// template includes header and footer elements and body structure
 		var playset = context.playset;
 		Debug.Log(playset.name);
-		var pageMap = menuPanel.GetComponent<PageMap>();
-		SetUp(context, pageMap);
+		pageMap = menuPanel.GetComponent<PageMap>();
+		SetUp(context);
 	}
 	
 	public override void Exit ()
@@ -23,19 +23,26 @@ public class ViewPlaysetState : State {
 		//pageMap.ClearAll();
 	}
 	
-	private void SetUp(StateContext context, PageMap pageFrame) {
+	private void SetUp(StateContext context) {
 		//swipe-drag-nav colliders
+		pageMap.GetAnchor(UIAnchor.Side.TopLeft).GetComponentInChildren<Button>()
+			.OnClick = new EventDelegate(Back);
+		pageMap.GetAnchor(UIAnchor.Side.BottomLeft).GetComponentInChildren<Button>()
+			.OnClick = new EventDelegate(PrevPlayset);
+		pageMap.GetAnchor(UIAnchor.Side.BottomRight).GetComponentInChildren<Button>()
+			.OnClick = new EventDelegate(NextPlayset);
+		//playsets
 		var playsets = context.manager.Playsets;
 		var viewIndex = playsets.IndexOf(context.playset);
-		var empty = pageFrame.body.transform.childCount == 0;
+		var empty = pageMap.body.transform.childCount == 0;
 		for (int i=-1; i<2; i++) {
 			var loop = (playsets.Count-1)==0 ? 1 : (playsets.Count-1);
 			var playset = playsets[ (i + viewIndex) %  loop ];
 			Transform subPage;
-			subPage = pageFrame.transform.Find(playset.name);
+			subPage = pageMap.transform.Find(playset.name);
 			if (subPage == null) {
 				subPage = 
-					NGUITools.AddChild(pageFrame.body.gameObject, context.manager.prefabs.playsetSubPage).transform;
+					NGUITools.AddChild(pageMap.body.gameObject, context.manager.prefabs.playsetSubPage).transform;
 			}
 			subPage.localPosition = new Vector3(i*Screen.width, 0, 0);
 			SetUpSubPage(subPage.gameObject.GetComponent<PageMap>(), playset);
@@ -70,5 +77,24 @@ public class ViewPlaysetState : State {
 	
 	private UILabel AddLabel(PageMap page, UIAnchor anchor, GameObject prefab) {
 		return page.AddLabel(anchor, prefab);
+	}
+	
+	public void Back() {
+		new BrowsePlaysetsState().Enter(new StateContext());
+	}
+	
+	public void PrevPlayset() {
+		ChangePlayset(-1);
+	}
+	
+	public void NextPlayset() {
+		ChangePlayset(1);
+	}
+	
+	private void ChangePlayset(int screenTween) {
+		var pageBody = pageMap.body.gameObject;
+		var bodyPos = pageBody.transform.position;
+		var dest = new Vector3(bodyPos.x+screenTween*Screen.width, bodyPos.y, bodyPos.z);
+		TweenPosition.Begin(pageBody, 1f, dest);
 	}
 }
