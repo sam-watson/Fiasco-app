@@ -9,13 +9,22 @@ public class BrowsePlaysetsState : State {
 		base.Enter (context);
 		menuPanel = context.manager.browserPanel;
 		menuPanel.SetActive(true);
+		//get playset info from service (context)
+		var playsets = context.manager.Playsets;
 		//generate buttons linking to playset viewer state
 		var grid = menuPanel.GetComponentInChildren<UIGrid>();
-		//get playset info from service (context)
-		foreach (Playset playset in context.manager.Playsets) {
-			var buttonObj = (GameObject) Object.Instantiate(context.manager.prefabs.playsetButton);
+		var gridTrans = grid.transform;
+		int i = 0;
+		foreach (Playset playset in playsets) {
+			GameObject buttonObj;
+			if ( i < gridTrans.childCount) {
+				buttonObj = gridTrans.GetChild(i).gameObject;
+				i++;
+			} else {
+				buttonObj = (GameObject) Object.Instantiate(context.manager.prefabs.playsetButton);
+			}
 			var buttonTrans = buttonObj.transform;
-			buttonTrans.parent = grid.transform;
+			buttonTrans.parent = gridTrans;
 			grid.cellHeight = NGUIMath.CalculateAbsoluteWidgetBounds(buttonTrans).size.y +5;
 			buttonObj.AddComponent<UIDragPanelContents>();
 			var button = buttonObj.AddComponent<PlaysetButton>();
