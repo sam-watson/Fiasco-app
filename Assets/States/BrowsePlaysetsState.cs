@@ -17,20 +17,24 @@ public class BrowsePlaysetsState : State {
 		int i = 0;
 		foreach (Playset playset in playsets) {
 			GameObject buttonObj;
+			PlaysetButton button;
 			if ( i < gridTrans.childCount) {
 				buttonObj = gridTrans.GetChild(i).gameObject;
+				button = buttonObj.GetComponent<PlaysetButton>();
 				i++;
 			} else {
 				buttonObj = (GameObject) Object.Instantiate(context.manager.prefabs.playsetButton);
+				button = buttonObj.AddComponent<PlaysetButton>();
+				buttonObj.AddComponent<UIDragPanelContents>();
+				var buttonTrans = buttonObj.transform;
+				buttonTrans.parent = gridTrans;
+				buttonTrans.localScale = Vector3.one;
+				grid.cellHeight = NGUIMath.CalculateAbsoluteWidgetBounds(buttonTrans).size.y +5;
 			}
-			var buttonTrans = buttonObj.transform;
-			buttonTrans.parent = gridTrans;
-			grid.cellHeight = NGUIMath.CalculateAbsoluteWidgetBounds(buttonTrans).size.y +5;
-			buttonObj.AddComponent<UIDragPanelContents>();
-			var button = buttonObj.AddComponent<PlaysetButton>();
 			button.Playset = playset;
 			button.IsEnabled = true;
 		}
+		i = playsets.Count;
 		while ( i < gridTrans.childCount) {
 			gridTrans.GetChild(i).GetComponentInChildren<Button>().IsEnabled = false;
 			i++;
