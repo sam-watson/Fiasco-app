@@ -7,7 +7,7 @@ public class BrowsePlaysetsState : State {
 	public override void Enter (StateContext context)
 	{
 		base.Enter (context);
-		menuPanel = context.manager.browserPanel;
+		SetMenuPanel(context.manager.browserPanel);
 		menuPanel.SetActive(true);
 		//get playset info from service (context)
 		var playsets = context.manager.Playsets;
@@ -21,7 +21,6 @@ public class BrowsePlaysetsState : State {
 			if ( i < gridTrans.childCount) {
 				buttonObj = gridTrans.GetChild(i).gameObject;
 				button = buttonObj.GetComponent<PlaysetButton>();
-				i++;
 			} else {
 				buttonObj = (GameObject) Object.Instantiate(context.manager.prefabs.playsetButton);
 				button = buttonObj.AddComponent<PlaysetButton>();
@@ -29,8 +28,9 @@ public class BrowsePlaysetsState : State {
 				var buttonTrans = buttonObj.transform;
 				buttonTrans.parent = gridTrans;
 				buttonTrans.localScale = Vector3.one;
-				grid.cellHeight = NGUIMath.CalculateAbsoluteWidgetBounds(buttonTrans).size.y +5;
+				grid.cellHeight = NGUIMath.CalculateRelativeWidgetBounds(buttonTrans).size.y +5;
 			}
+			i++;
 			button.Playset = playset;
 			button.IsEnabled = true;
 		}
@@ -45,9 +45,5 @@ public class BrowsePlaysetsState : State {
 	public override void Exit ()
 	{
 		base.Exit ();
-	}
-	
-	private void GoToViewPlaysetState() {
-		new ViewPlaysetState().Enter(new StateContext());
 	}
 }

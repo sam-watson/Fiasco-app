@@ -31,7 +31,7 @@ public class PlaysetManager : MonoBehaviour {
 			playset.info = JsonMapper.ToObject<PlaysetInfo>(infoText.text);
 			//images
 			playsets.Add(playset);
-			Debug.Log(playsets.IndexOf(playset) + ": " + playset.name);
+			Debug.Log("Loading... " + playsets.IndexOf(playset) + ": " + playset.name);
 		}
 	}
 }

@@ -5,7 +5,7 @@ using System.Collections.Generic;
 public abstract class State {
 	
 	public GameObject menuPanel;
-	public StateContext initialContext;
+	protected StateContext initialContext;
 	
 	protected PageMap pageMap;
 	
@@ -22,12 +22,18 @@ public abstract class State {
 		if (menuPanel != null)
 			menuPanel.SetActive(false);
 	}
+	
+	protected void SetMenuPanel(GameObject menuPanel) {
+		this.menuPanel = menuPanel;
+		menuPanel.SetActive(true);
+		pageMap = menuPanel.GetComponent<PageMap>();
+	}
 }
 
 public class StateContext {
 	
 	public StateManager manager;
-	public Playset playset;
+	public readonly Playset playset;
 	
 	public StateContext() {
 		manager = StateManager.Instance;
