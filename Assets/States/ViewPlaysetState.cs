@@ -19,7 +19,6 @@ public class ViewPlaysetState : State {
 		var playsets = context.manager.Playsets;
 		var viewIndex = playsets.IndexOf(initialContext.playset);
 		Debug.Log("Starting "+ playset.name + "view-state, index " + viewIndex);
-		Debug.Log();
 		SetUpButtons();
 		if (!setUp) {
 			playsetPanel = pageMap.body.GetComponentInChildren<TweenPosition>();
