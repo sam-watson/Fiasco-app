@@ -1,4 +1,6 @@
 {
 "playsets" : [
-	"Flyover"
+	"DC 73",
+	"Flyover",
+	"Manna Hotel"
 ]}

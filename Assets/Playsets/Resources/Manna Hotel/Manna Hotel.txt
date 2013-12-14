@@ -1,0 +1,10 @@
+{
+	"subtitle": "AN OASIS FOR WEARY TRAVELERS",
+	"summary": "The Manna Hotel is three miles north of Manna, Kansas, population 1,200.
+
+The Manna Hotel is a twenty-room motor lodge with its own in-ground swimming pool, now unused. The hotel burned down and was rebuilt in the fifties. Wood paneling and window-unit air conditioners were installed in the seventies, and it looks like that’s the last maintenance anyone did to the place.
+
+Business has been slow ever since they moved the Interstate, so ten of the rooms are closed all the time now. The other ten rooms are rented and cleaned by a manager who lives on the premises.",
+	"movienight": "Bottle Rocket, The Big Lebowski, Twin Peaks (TV).",
+	"credits": "Written by Dan Puckett, Edited by Steve Segedy."
+}
