@@ -8,6 +8,7 @@ public class PageMap : MonoBehaviour {
 	public UIAnchor head;
 	public UIAnchor body;
 	public UIAnchor foot;
+	public UISprite background;
 	
 	private List<UIAnchor> anchors = new List<UIAnchor>();
 	private Transform trans;

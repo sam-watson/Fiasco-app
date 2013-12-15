@@ -6,6 +6,7 @@ public class ViewPlaysetState : State {
 	
 	public Playset queuedPlayset;
 	private static TweenPosition playsetPanel;
+	private static Dictionary<string, PlaysetViewSubPage> subPages;
 	
 	private static bool setUp = false;
 
@@ -17,7 +18,7 @@ public class ViewPlaysetState : State {
 		// template includes header and footer elements and body structure
 		var playset = context.playset;
 		var playsets = context.manager.Playsets;
-		var viewIndex = playsets.IndexOf(initialContext.playset);
+		var viewIndex = playsets.IndexOf(playset);
 		Debug.Log("Starting "+ playset.name + "view-state, index " + viewIndex);
 		SetUpButtons();
 		if (!setUp) {
@@ -26,13 +27,13 @@ public class ViewPlaysetState : State {
 		}
 		var curPos = new Vector3(-viewIndex*Screen.width, 0, 0);
 		TweenPosition.Begin(playsetPanel.gameObject, 0, curPos);
+		TweenAlpha.Begin(subPages[playset.name].background.gameObject, 1f, 0.2f);
 	}
 	
 	public override void Exit ()
 	{
 		base.Exit ();
-		var pageMap = menuPanel.GetComponent<PageMap>();
-		//pageMap.ClearAll();
+		TweenAlpha.Begin(subPages[initialContext.playset.name].background.gameObject, 0f, 1f);
 	}
 	
 	private void SetUpButtons() {
@@ -49,21 +50,26 @@ public class ViewPlaysetState : State {
 		//playsets
 		var playsets = context.manager.Playsets;
 		var viewIndex = playsets.IndexOf(context.playset);
-		//var empty = pageMap.body.transform.childCount == 0;
+		subPages = new Dictionary<string, PlaysetViewSubPage>();
 		for (int i=0; i<playsets.Count; i++) {
 			var playset = playsets[ i ];
 			var subPage = NGUITools.AddChild(playsetPanel.gameObject, context.manager.prefabs.playsetSubPage).transform;
 			subPage.localPosition = new Vector3(i*Screen.width, 0, 0);
-			SetUpSubPage(subPage.gameObject.GetComponent<PageMap>(), playset);
+			var subPageMap = subPage.gameObject.GetComponent<PlaysetViewSubPage>();
+			SetUpSubPage(subPageMap, playset);
+			subPages.Add(playset.name, subPageMap);
 		}
 		setUp = true;
 	}
 	
-	private void SetUpSubPage(PageMap subPage, Playset playset) {
+	private void SetUpSubPage(PlaysetViewSubPage subPage, Playset playset) {
 		subPage.name = playset.name;
 		Debug.Log("Setting up "+ playset.name);
 		var hitchcockLabel = initialContext.manager.prefabs.styledLabel;
 		var otherLabel = initialContext.manager.prefabs.plainLabel;
+		//background
+		subPage.background.spriteName = "bg " + playset.name;
+		//header
 		var title = AddLabel(subPage, subPage.head, hitchcockLabel);
 		title.text = playset.name;
 		title.effectStyle = UILabel.Effect.Outline;
