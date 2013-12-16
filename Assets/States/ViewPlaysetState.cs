@@ -27,13 +27,13 @@ public class ViewPlaysetState : State {
 		}
 		var curPos = new Vector3(-viewIndex*Screen.width, 0, 0);
 		TweenPosition.Begin(playsetPanel.gameObject, 0, curPos);
-		TweenAlpha.Begin(subPages[playset.name].background.gameObject, 1f, 0.2f);
+		ShowInfo(subPages[playset.name], true, 1f);
 	}
 	
 	public override void Exit ()
 	{
+		ShowInfo(subPages[initialContext.playset.name], false, 0);
 		base.Exit ();
-		TweenAlpha.Begin(subPages[initialContext.playset.name].background.gameObject, 0f, 1f);
 	}
 	
 	private void SetUpButtons() {
@@ -58,6 +58,7 @@ public class ViewPlaysetState : State {
 			var subPageMap = subPage.gameObject.GetComponent<PlaysetViewSubPage>();
 			SetUpSubPage(subPageMap, playset);
 			subPages.Add(playset.name, subPageMap);
+			ShowInfo(subPageMap, false, 0);
 		}
 		setUp = true;
 	}
@@ -94,6 +95,19 @@ public class ViewPlaysetState : State {
 	
 	private UILabel AddLabel(PageMap page, UIAnchor anchor, GameObject prefab) {
 		return page.AddLabel(anchor, prefab);
+	}
+	
+	private void ShowInfo(PlaysetViewSubPage subPage, bool on, float speed) {
+		float bgAlpha = 1f;
+		float txtAlpha = 0f;
+		if (on) {
+			bgAlpha = 0.2f;
+			txtAlpha = 1f;
+		}
+		TweenAlpha.Begin(subPage.background.gameObject, speed, bgAlpha);
+		TweenAlpha.Begin(subPage.body.GetComponentInChildren<UIPanel>().gameObject, speed, txtAlpha);
+		TweenAlpha.Begin(subPage.head.gameObject, speed, txtAlpha);
+		TweenAlpha.Begin(subPage.foot.gameObject, speed, txtAlpha);
 	}
 	
 	public void Back() {
