@@ -4,7 +4,6 @@ using System.Collections.Generic;
 
 public class PageMap : MonoBehaviour {
 	
-	//anchors
 	public UIAnchor head;
 	public UIAnchor body;
 	public UIAnchor foot;

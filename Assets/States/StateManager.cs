@@ -9,10 +9,6 @@ public class StateManager : MonoBehaviour {
 	public GameObject viewerPanel;
 	public Prefabs prefabs;
 	
-//	public GameObject playsetButtonPrefab;
-//	public GameObject playsetLabelPrefab;
-//	public GameObject playsetSubPagePrefab;
-	
 	private PlaysetManager playsetManager;
 	[HideInInspector] public State currentState;
 	

@@ -9,9 +9,8 @@ public class BrowsePlaysetsState : State {
 		base.Enter (context);
 		SetMenuPanel(context.manager.browserPanel);
 		menuPanel.SetActive(true);
-		//get playset info from service (context)
 		var playsets = context.manager.Playsets;
-		//generate buttons linking to playset viewer state
+		//generate buttons linking to playset viewer states
 		var grid = menuPanel.GetComponentInChildren<UIGrid>();
 		var gridTrans = grid.transform;
 		int i = 0;
@@ -40,10 +39,5 @@ public class BrowsePlaysetsState : State {
 			i++;
 		}
 		grid.Reposition();
-	}
-	
-	public override void Exit ()
-	{
-		base.Exit ();
 	}
 }

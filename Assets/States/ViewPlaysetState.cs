@@ -5,26 +5,22 @@ using System.Collections.Generic;
 public class ViewPlaysetState : State {
 	
 	public Playset queuedPlayset;
+	
 	private static TweenPosition playsetPanel;
 	private static Dictionary<string, PlaysetViewSubPage> subPages;
-	
 	private static bool setUp = false;
 
 	public override void Enter (StateContext context)
 	{
 		base.Enter (context);
 		SetMenuPanel(context.manager.viewerPanel);
-		//instantiate a new page with page map = template is setup there
-		// template includes header and footer elements and body structure
 		var playset = context.playset;
 		var playsets = context.manager.Playsets;
 		var viewIndex = playsets.IndexOf(playset);
 		Debug.Log("Starting "+ playset.name + "view-state, index " + viewIndex);
 		SetUpButtons();
 		if (!setUp) {
-			playsetPanel = pageMap.body.GetComponentInChildren<TweenPosition>();
-			SetUpPlaysets(context);
-		}
+			SetUpPlaysets(context); }
 		var curPos = new Vector3(-viewIndex*Screen.width, 0, 0);
 		TweenPosition.Begin(playsetPanel.gameObject, 0, curPos);
 		ShowInfo(subPages[playset.name], true, 1f);
@@ -47,9 +43,8 @@ public class ViewPlaysetState : State {
 	}
 	
 	private void SetUpPlaysets(StateContext context) {
-		//playsets
+		playsetPanel = pageMap.body.GetComponentInChildren<TweenPosition>();
 		var playsets = context.manager.Playsets;
-		var viewIndex = playsets.IndexOf(context.playset);
 		subPages = new Dictionary<string, PlaysetViewSubPage>();
 		for (int i=0; i<playsets.Count; i++) {
 			var playset = playsets[ i ];
@@ -67,7 +62,7 @@ public class ViewPlaysetState : State {
 		subPage.name = playset.name;
 		Debug.Log("Setting up "+ playset.name);
 		var hitchcockLabel = initialContext.manager.prefabs.styledLabel;
-		var otherLabel = initialContext.manager.prefabs.plainLabel;
+		var plainLabel = initialContext.manager.prefabs.plainLabel;
 		//background
 		subPage.background.spriteName = "bg " + playset.name;
 		//header
@@ -81,15 +76,15 @@ public class ViewPlaysetState : State {
 		var subtitle = AddLabel(subPage, body, hitchcockLabel);
 		subtitle.text = playset.info.subtitle;
 		subtitle.fontStyle = FontStyle.Bold;
-		var summary = AddLabel(subPage, body, otherLabel);
+		var summary = AddLabel(subPage, body, plainLabel);
 		summary.text = playset.info.summary;
 		var movienight = AddLabel(subPage, body, hitchcockLabel);
 		movienight.text = "Movie Night:";
 		movienight.fontStyle = FontStyle.Bold;
-		var movies = AddLabel(subPage, body, otherLabel);
+		var movies = AddLabel(subPage, body, plainLabel);
 		movies.text = playset.info.movienight;
 		movies.fontStyle = FontStyle.Italic;
-		var credits = AddLabel(subPage, body, otherLabel);
+		var credits = AddLabel(subPage, body, plainLabel);
 		credits.text = "CREDITS: " + playset.info.credits;
 	}
 	
@@ -126,7 +121,6 @@ public class ViewPlaysetState : State {
 		var pageBody = pageMap.body.gameObject;
 		var playsets = initialContext.manager.Playsets;
 		var viewIndex = playsets.IndexOf(initialContext.playset);
-		//var loop = (playsets.Count-1)==0 ? 1 : (playsets.Count-1);
 		var newPs = Mathf.Clamp(screenTween + viewIndex, 0, playsets.Count-1);
 		queuedPlayset = playsets[ newPs ];
 		Debug.Log("Queue up "+ queuedPlayset + ", index " + newPs);

@@ -11,13 +11,6 @@ public class PlaysetManager : MonoBehaviour {
 		LoadAllPlaysets();
 	}
 	
-	public void LoadPlaysetsFromFile() {
-//		var js = new JSON();
-//		var txt = (TextAsset)Resources.Load("playsets");
-//		js.serialized = txt.text;
-//		playsets = new List<Playset>(Playset.Array(js.ToArray<JSON>("playsets")));
-	}
-	
 	public void LoadAllPlaysets() {
 		//get list of all play-sets
 		Debug.Log("Loading playsets...");
@@ -29,7 +22,7 @@ public class PlaysetManager : MonoBehaviour {
 			playset.name = playsetName;
 			var infoText = (TextAsset)Resources.Load(playsetName + "/" + playsetName);
 			playset.info = JsonMapper.ToObject<PlaysetInfo>(infoText.text);
-			//images
+			//TODO: images
 			playsets.Add(playset);
 			Debug.Log("Loading... " + playsets.IndexOf(playset) + ": " + playset.name);
 		}

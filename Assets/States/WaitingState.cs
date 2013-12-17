@@ -8,7 +8,7 @@ public class WaitingState : State {
 		base.Enter (context);
 //		menuPanel = context.manager.logoPanel;
 //		menuPanel.SetActive(true);
-		context.manager.WaitForIt(2f, new EventDelegate(GoToBrowsePlaysets));
+		context.manager.WaitForIt(1f, new EventDelegate(GoToBrowsePlaysets));
 	}
 	
 	private void GoToBrowsePlaysets() {
