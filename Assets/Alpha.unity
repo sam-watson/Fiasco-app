@@ -636,14 +636,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   mColor: {r: 1, g: 1, b: 1, a: 1}
   mPivot: 4
-  mWidth: 93
+  mWidth: 57
   mHeight: 16
   mDepth: 1
   autoResizeBoxCollider: 0
   keepCrispWhenShrunk: 1
   mTrueTypeFont: {fileID: 12800000, guid: 864d99568b2f04943a55a1d573d0c321, type: 3}
   mFont: {fileID: 0}
-  mText: Button
+  mText: play!
   mFontSize: 16
   mFontStyle: 0
   mEncoding: 1
@@ -778,6 +778,22 @@ Prefab:
     - target: {fileID: 6500000, guid: d4002ed242bdb0c428fd5224033b978a, type: 2}
       propertyPath: m_Center.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: d4002ed242bdb0c428fd5224033b978a, type: 2}
+      propertyPath: mWidth
+      value: 57
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: d4002ed242bdb0c428fd5224033b978a, type: 2}
+      propertyPath: mText
+      value: play!
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400010, guid: d4002ed242bdb0c428fd5224033b978a, type: 2}
+      propertyPath: style
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400010, guid: d4002ed242bdb0c428fd5224033b978a, type: 2}
+      propertyPath: borderPadding.x
+      value: -20
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: d4002ed242bdb0c428fd5224033b978a, type: 2}
@@ -2138,11 +2154,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   uiCamera: {fileID: 0}
   container: {fileID: 356552297}
-  style: 0
+  style: 1
   runOnlyOnce: 0
   relativeSize: {x: 1, y: 1}
   initialSize: {x: 1, y: 1}
-  borderPadding: {x: 0, y: 0}
+  borderPadding: {x: -20, y: 0}
   widgetContainer: {fileID: 0}
 --- !u!114 &1685395864
 MonoBehaviour:
