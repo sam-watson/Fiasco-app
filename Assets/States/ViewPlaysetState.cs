@@ -40,6 +40,8 @@ public class ViewPlaysetState : State {
 			.OnClick = new EventDelegate(PrevPlayset);
 		pageMap.GetAnchor(UIAnchor.Side.BottomRight).GetComponentInChildren<Button>()
 			.OnClick = new EventDelegate(NextPlayset);
+		pageMap.GetAnchor(UIAnchor.Side.Bottom).GetComponentInChildren<Button>()
+			.OnClick = new EventDelegate(ViewDetails);
 	}
 	
 	private void SetUpPlaysets(StateContext context) {
@@ -102,7 +104,7 @@ public class ViewPlaysetState : State {
 		TweenAlpha.Begin(subPage.background.gameObject, speed, bgAlpha);
 		TweenAlpha.Begin(subPage.body.GetComponentInChildren<UIPanel>().gameObject, speed, txtAlpha);
 		TweenAlpha.Begin(subPage.head.gameObject, speed, txtAlpha);
-		TweenAlpha.Begin(subPage.foot.gameObject, speed, txtAlpha);
+		//TweenAlpha.Begin(subPage.foot.gameObject, speed, txtAlpha);
 	}
 	
 	public void Back() {
@@ -135,5 +137,9 @@ public class ViewPlaysetState : State {
 	
 	public void NewState() {
 		new ViewPlaysetState().Enter(new StateContext(queuedPlayset));
+	}
+	
+	private void ViewDetails() {
+		new PlaysetDetailsState().Enter(new StateContext(initialContext.playset));
 	}
 }
