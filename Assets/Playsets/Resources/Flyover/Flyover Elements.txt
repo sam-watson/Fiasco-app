@@ -1,0 +1,168 @@
+1 FRIENDSHIP
+1 Grew up on neighboring farms
+2 Mutual outcasts
+3 Best friends
+4 Extremely unlikely friends
+5 Keepers of a dark secret
+6 Church friends (social enemies)
+2 FAMILY 
+1 You think you’re kin, but you aren’t
+2 Siblings
+3 Parent and child
+4 Cousins
+5 Parent and son or daughter-in-law
+6 You don’t think you’re kin, but you are
+3 crime
+1 Cooking the books on a building contract
+2 Farm machinery thief and fence
+3 Arsonist and arson-obsessed vigilante
+4 Methamphetamine entrepreneurs
+5 Marijuana importer and dealer
+6 Farm subsidy fraud perpetrator and government official
+4 OUT AND ABOUT
+1 Athletes (touring bicyclists, runners, rec league team sports)
+2 Church folk (youth group, outreach, lay minister, secretary)
+3 Civil Air Patrol members
+4 Centro de la Justicia Social volunteers
+5 Town part-time staff
+6 Police officer and paid informant
+5 romance 
+1 Married, to each other
+2 High school sweethearts who parted ways
+3 This one time, drunk, in a soybean field
+4 Unhealthy obsession
+5 Passionate lovers
+6 Weird romance
+6 work
+1 Part-time farm hands
+2 Construction, out at the county airport
+3 Wealthy farmer and OSHA inspector
+4 Commuters with jobs in town
+5 Salesman and customer
+6 Professional and client (doctor, lawyer, banker, dealer, dentist)
+1 TO GET EVEN
+1 ... with the guy who humiliated you
+2 ... with a neighbor
+3 ... with a cop
+4 ... with the whole county, which brought you to this point
+5 ... with the scum who are dealing drugs in your town
+6 ... with that bitch Marcie Lowell
+2 TO GET OUT 
+1 … of a huge fucking obligation
+2 … of paying taxes on 500 acres of rotting soybeans
+3 ... of a relationship
+4 ... of a deal out at the airport that’s gone sour
+5 ... of your ill-chosen words to the cartel representative
+6 … of this county, to escape family and tradition
+3 TO GET IN
+1 ... good with your rich, sick uncle
+2 ... shape, so you can impress Marcie Lowell
+3 ... the door at Centro de la Justicia Social, for a meal and a cot
+4 ... bed with the cops, by dropping a dime on someone
+5 ... deep with the serious guys in the Escalade up from Juárez
+6 ... trouble like you used to, with your buddies, back in the day
+4 TO GET IT ON 
+1 ... with the incomparable Marcie Lowell
+2 ... and prove you are finally free
+3 ... because the alternative is real bad
+4 ... with a freaky Mexican
+5 ... to seal the deal
+6 ... and make a baby, for real this time
+5 TO GET RICH
+1 ... through building a runway out of shit materials
+2 ... through selling a baby
+3 ... through harvesting another farmer’s crop
+4 ... through forging a document
+5 ... through stealing farm machinery
+6 ... through shorting a drug dealer
+6 TO GET THE TRUTH 
+1 ... about Centro de la Justicia Social’s agenda
+2 ... about the dirty contract for the new runway
+3 ... about Marcie Lowell
+4 ... about the weird guy who is harassing your mom
+5 ... about your real parents
+6 ... about what goes on behind the grain elevators some nights
+1 EAST BRANCH ROAD
+1 Community Health Clinic
+2 Crandall’s Seed Cleaner Service
+3 The Windmill Diner
+4 Parts Plus
+5 Centro de la Justicia Social
+6 Clipper Bank and Trust
+2 WEST BRANCH ROAD 
+1 The old ConAgra grain elevator
+2 Victory Electrical Cooperative
+3 Farmer’s Tool and Equipment
+4 West Branch IGA grocery
+5 The brand-new Progress Ethanol plant
+6 Shab’s Bar
+3 SUCKER CREEK
+1 The drainage ditch “party cave”
+2 An abandoned farmstead, dishes still on the table
+3 The dog-fighting ring at the end of a long dirt road
+4 Deer-hunting swamp
+5 The swimming hole
+6 A shallow grave in a neglected sunflower field
+4 COUNTY ROAD SIXTEEN 
+1 The fireworks stand at the Jaguar Road intersection
+2 The Olsen place, 700 acres in corn
+3 Roads and the skeletons of houses; a sign saying “Starfield Acres”
+4 E.A. Hutchinson High School
+5 A split-level ranch with twenty cars parked in the front yard
+6 The Byrd place, foreclosed, crops tended by neighbors
+5 GATEWAY COUNTY AIRPORT 
+1 Freight hangar and FAA/TSA offices
+2 Terminal building and airport offices
+3 Control tower above the terminal
+4 Maintenance hangar and power plant overhaul facility
+5 Construction trailer at the end of Runway Two
+6 Fire Department garage at the end of Runway One
+6 THE LOWELL FARM
+1 A chicken coop, converted into a studio apartment
+2 The tractor garage and tool shed
+3 A one hundred acre cornfield
+4 The six bedroom house with swimming pool
+5 The trailers out back where the migrant workers live
+6 A garbage dump leaking chemicals into Sucker Creek
+1 JUICY
+1 An insulated organ transport bag
+2 A love letter written in broken Spanish
+3 Printouts of an Internet conversation
+4 Crime scene photographs
+5 A newspaper story from twenty years ago
+6 Weird chemical apparatus tucked away in a barn
+2 TRANSPORTATION 
+1 Tricked out late model SUV
+2 Big block pickup with a lift kit
+3 Ford Taurus with government plates 
+4 Farm-All tractor with a hay wagon
+5 Broken down old corn truck
+6 Mexican tour bus
+3 WEAPONS
+1 Cattle prod
+2 .22 hunting rifle
+3 A jar of home-canned peaches laced with Atrazine
+4 Antique sled cutter blade
+5 100 gallon tank of anhydrous ammonia
+6 Chinese-made AKM assault rifle
+4 TRAUMATIC 
+1 Rabid raccoon
+2 Unforeseen prosthetic limb
+3 Blazing crop fire
+4 Unopened legal notice
+5 150 mile-per-hour category F-2 tornado
+6 Pieces of a car’s brake system in a trash can
+5 VALUABLES 
+1 A wedding ring with a big fucking rock
+2 Brand new John Deere 9870 STS combine with corn row header
+3 Pickup truck loaded with drugs
+4 55,000 bushels of soybeans
+5 ATM card with the PIN number written on the back
+6 Impounded cargo at gateway County Airport
+6 SENTIMENTAL
+1 Note from father to son
+2 Antique grandfather clock with a hidden compartment
+3 Adoption certificate
+4 Live hand grenade brought back from Vietnam
+5 Child’s treasure map
+6 Family Bible

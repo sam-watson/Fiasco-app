@@ -1,0 +1,168 @@
+1 Family
+1 Parent / child
+2 Cousins
+3 Bastard relation
+4 Aunt or uncle / niece or nephew
+5 Siblings
+6 Distant / unusual / unofficial relatives
+2 Politics
+1 Majority party member / opposition party member
+2 Visiting dignitary / host
+3 Politician / advisor
+4 Communists or communist sympathizers
+5 Activists
+6 Elder statesman / young turk
+3 Military-Industrial
+1 Military officers (current and/or former)
+2 In the lobbyist game
+3 Corporate donor / beneficiary (legal or illegal)
+4 Hawk / dove
+5 Officer / war profiteer
+6 Veterans
+4 Law or Outlaw
+1 Bribery
+2 Blackmail
+3 Federal marshal / name on the arrest warrant
+4 Named in the same report
+5 Spies (same side or not)
+6 Revolutionaries (same side or not)
+5 Romance
+1 Current spouses
+2 Estranged spouses
+3 John / high-class prostitute
+4 One-time fling
+5 Lovers
+6 Former lovers
+6 On the Outside
+1 Boss / employee
+2 Stewardess / frequent flyer
+3 Client / translator
+4 Experts on nuclear weapons
+5 Custodial or secretarial staff
+6 Reporter / source
+1 To Serve the Mother Country
+1 … by finding infiltrators
+2 … by quashing dissent
+3 … by going to war / starting a new war
+4 … by toppling a corrupt system
+5 … by helping the little people
+6 … by preventing nuclear annihilation
+2 To Get Rich
+1 … off the American people
+2 … by selling state secrets
+3 … by lying through your teeth
+4 … by landing a job in high finance
+5 … by stealing from the Man
+6 … by securing a government contract
+3 To Get Respect
+1 … from your superiors, by advancing their goals
+2 … from constituents, by using pork-barrel politics
+3 … from the counterculture, by sticking it to the Man
+4 … after a major fuckup, by making things right
+5 … from a family member, by living up to the legacy
+6 … from yourself, by upholding your nation’s ideals
+4 To Get the Truth
+1 … that will bring down the President
+2 … that will lead to the nukes being dismantled / deployed
+3 … to change the course of the war in Vietnam
+4 … to lead all people to enlightenment
+5 … during a communication breakdown
+6 … and reveal a superpower’s dirty laundry to its subjects
+5 To Get Even
+1 … with somebody you think is lying to you
+2 … with the country that betrayed you
+3 … with your old boss
+4 … with someone who used you as a political tool
+5 … with the enemies of your culture
+6 … with the rival who got all the breaks
+6 To Get Out
+1 … by defecting
+2 … by escaping with the money
+3 … of a relationship
+4 … of crushing responsibilities
+5 … of the lose-lose political game
+6 … of this square trip, man
+1 Capitol Hill
+1 Walkway inside the Capitol Dome
+2 Senator or representative’s office
+3 Supreme Court chambers
+4 Senate or House chambers
+5 The stacks of the Library of Congress
+6 Broom closet 3B of the Capitol Building
+2 Near the Mall
+1 Park bench near the Reflecting Pool
+2 Arlington National Cemetery
+3 Ford’s Theatre
+4 White House Press Corps offices
+5 National Air & Space Museum (under construction)
+6 Public restroom near the Lincoln Memorial
+3 Residences
+1 Pit Stop Motel (hourly rates)
+2 Posh apartment
+3 The Lincoln bedroom
+4 Condemned apartment
+5 VA Hospital
+6 Watergate Hotel
+4 Entertainment
+1 Eastern Market
+2 Kennedy Center for the Performing Arts
+3 The fishing boat “Boondoggle”
+4 Carpenters concert
+5 Special exhibit at the National Gallery of Art
+6 Washington Capitals hockey game
+5 Underground
+1 Well-stocked fallout shelter
+2 Unfinished subway tunnel
+3 Armed forces war room
+4 Militants’ lair
+5 The Pentagon basement, Ring G
+6 Parking garage
+6 Abroad: Back then, now, or soon
+1 Red Square
+2 East Berlin
+3 U.S.S. Midway aircraft carrier, near Vietnam
+4 Whistle-stop tour train
+5 Siberian gulag
+6 Havana
+1 Classified
+1 Dossier about foreign spies working on U.S. soil
+2 Key to secure offices
+3 Combination to a safe
+4 The truth about Area 51
+5 Cracked codes
+6 Audio tapes from the White House
+2 Information
+1 Name and number of a politician’s mistress
+2 Poorly researched report
+3 Incriminating photos
+4 Number of the red telephone
+5 Propaganda
+6 Names and addresses of counterculture leaders
+3 Valuables
+1 Government contract with a major corporation
+2 Suitcase full of rubles
+3 Stolen page of the Constitution
+4 30 minutes of airtime on national TV
+5 Nazi bullion
+6 A whole lot of LSD
+4 Transportation
+1 Limousine
+2 Roller skates
+3 Covert surveillance van
+4 Motor scooter
+5 Private jet
+6 Taxi
+5 Sentimental
+1 Family Bible
+2 American flag
+3 Letters from back home
+4 Cufflinks owned by FDR / Lenin
+5 Box of Cuban cigars
+6 Pen used to sign important legislation
+6 Weapon
+1 Revolver
+2 The nuclear “football” briefcase
+3 Tear gas canister
+4 Sword cane
+5 AK-47
+6 Bowling ball

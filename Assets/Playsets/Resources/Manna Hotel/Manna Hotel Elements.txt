@@ -1,0 +1,168 @@
+1 FRIENDSHIP
+1 Friends with benefits
+2 Went to high school together
+3 “You let me down when I needed it most!”
+4 Fought side by side in the war
+5 Friendship ended after one humiliated the other
+6 Spiritual advisor / truth-seeker
+2 FAMILY
+1 Husband and wife
+2 Ex-husband and ex-wife
+3 Siblings
+4 Identical twins
+5 Stepchildren
+6 Parent and child
+3 crime
+1 Blood brothers in the Kansas City Mafia
+2 Mortal enemies in the Kansas City Mafia
+3 Together, planned and executed a daring, drunken theft of the badger from its pen in Manna’s tiny zoo
+4 Watched June Alexander’s murder and did nothing to stop it
+5 Got caught setting a fire
+6 Did three years together in Lansing Correctional Facility
+4 COMMUNITY
+1 Neighbors
+2 VFW Post 1161
+3 Manna First Baptist Church
+4 Manna high school football
+5 National Pony Express Association, “an all-volunteer, non-profit historical organization for the purpose of identifying, reestablishing, and marking the original pony express trail”
+6 Bingo!
+5 romance
+1 Forbidden love
+2 Infatuation
+3 Romantic bliss
+4 On the rocks
+5 Insane jealousy
+6 Loathing
+6 work
+1 Manager and employee
+2 Sergeant and private
+3 Innkeeper and guest
+4 Seventh Degree Master of Fell Secrets and Initiate
+5 Lawyer and client
+6 Doctor and patient
+1 TO GET EVEN
+1 ... by taking what is rightfully yours
+2 ... by destroying what she never should have had in the first place
+3 ... by humiliating him
+4 ... but no one can know it was you
+5 ... and everyone has to know it was you
+6 ... for the good of America
+2 TO GET OUT
+1 … of these handcuffs
+2 … of sight for a while
+3 ... of your “relationship”
+4 ... of a promise you made
+5 ... of your marriage
+6 … of your contract
+3 TO GET RESPECT
+1 ... by making everyone afraid of you
+2 ... by making everyone mad at you
+3 ... through the exercise of subtle mystical powers
+4 ... from the one you love
+5 ... from the one you hate
+6 ... by living an epic story that will make you a hero forever
+4 TO GET LAID
+1 ... because she can protect me
+2 ... because I can use him to get what I really want
+3 ... because that’s what you do when you are deeply in love
+4 ... because I want to hurt someone else
+5 ... to propagate your superior bloodline
+6 ... to prove you are not the slightest bit gay
+5 TO GET RICH
+1 ... and you don’t care who you have to hurt to get it
+2 ... but no one can know it was you
+3 ... and everyone has to know it was you
+4 ... right now!
+5 ... but the money isn’t for you. It’s for somebody who needs it bad.
+6 ... enough to buy your safety
+6 TO GET THE TRUTH
+1 ... for the good of America
+2 ... about what really happened to him
+3 ... about the cover-up in Manna
+4 ... about what happened to the loot
+5 ... about why they did what they did to you
+6 ... about who you really are
+1 OUT FRONT
+1 In the dry swimming pool, currently filled with dead leaves
+2 The flagpole, flying a crisp American flag
+3 The trunk of a car
+4 Out by the road, where you can see who’s coming half a mile away
+5 The dumpster - vandals have spray-painted “USA #1” on it
+6 Under the old, spreading oak tree. This tree must have been alive for at least a hundred years.
+2 INSIDE
+1 A ransacked guest room with holes in the walls and ceiling
+2 A guest room sealed off since forever
+3 Next door
+4 A flyspecked windowsill
+5 Taped under a rug in one of the guest rooms
+6 In the tank of the toilet
+3 OUT BACK
+1 The fuse box - a pair of wires runs from the box into the woods
+2 The tornado shelter, its steel door rusted thin
+3 There’s just enough room for one person to squeeze between the fuel-oil tank and the outside wall of the office
+4 A gully leading down to Sumida Creek
+5 A laundry line with two sheets and a pair of men’s boxer shorts clipped to it
+6 Out by the long-neglected lawnmower
+4 EMPLOYEES ONLY
+1 The safe
+2 The office
+3 The room where the manager lives, formerly a guest room
+4 The desk drawers in the office
+5 Up on the roof
+6 The supply closet, containing a jug of ammonia and a nest of snakes
+5 NEARBY
+1 The dirt road to town
+2 The railroad tracks
+3 Sumida Creek Lake
+4 A clearing in the woods, with a fire pit and a makeshift altar
+5 Ed Keith’s buffalo ranch
+6 The old cemetery, unused since the fifties
+6 IN TOWN
+1 Manna High School
+2 The Tyrell & Janes Bank
+3 The abandoned Manna railroad station
+4 Manna First Baptist Church
+5 A padlocked entrance to the underground walkways
+6 A tiny zoo - no larger than a city block - run for some reason by the local power utility
+1 UNTOWARD
+1 A detailed diagram of the interior of the Tyrell & Janes Bank
+2 A peephole
+3 Five photos held together by a rubber band. Each photo features a different disemboweled corpse surrounded by hooded figures.
+4 A long, blond wig, matted with blood
+5 The wrong gun
+6 Seven dried ears on a dirty string
+2 INFORMATION
+1 A WPA mural from 1940 in the lobby of the post office downtown
+2 A map showing the 19th-century maze of walkways and passages beneath the streets of Manna.
+3 Clipped from a magazine and carefully pressed in a book, an article about “Brother John” Lazia, crime boss in the Kansas City Mafia
+4 A photo of the 1931 all-Asian Manna High School football team
+5 A Polaroid of Sumida Creek Lake with a penciled “X”
+6 A medal. The front side shows two men on horseback in mid-gallop exchanging a mailbag. One of the men is Caucasian; the other has distinctly Asian features. Motto: “Duty drives us -- We stop for none.” The back side has the inscription, “1931”.
+3 WEAPONS
+1 A dagger with a bone handle and a wavy blade. The blade has the inscription, E PLURIBUS UNUM.
+2 Two gallons of gasoline
+3 A spiked pit
+4 A Smith & Wesson Model 10 government-issue revolver, dating from World War II, fully loaded with vintage ammo
+5 A Tommy gun, disassembled and carefully wrapped in oily rags to prevent rust
+6 A shovel
+4 TRANSPORTATION
+1 A tractor
+2 A two-ton flatbed truck with an arc welder strapped to its bed
+3 A pickup truck, dented and dirty
+4 A Mercedes with a rotten smell
+5 An ambulance
+6 An empty boxcar on a forgotten siding
+5 VALUABLES
+1 A tiara, hammered flat, jewels removed
+2 A broken-down 18-wheeler loaded with buffalo jerky
+3 A bag containing $50,000 of raw gold dust and nuggets, reportedly buried somewhere around Sumida Creek Lake in the 19th century
+4 A black bear, recently housed at the local zoo
+5 A samurai sword with an engraving at the base of its blade
+6 A box of gold teeth
+6 SENTIMENTAL
+1 A U.S. Navy sea bag full of broken padlocks, all violently torn apart
+2 An unsigned postcard from Niagara Falls, postmarked 1934, addressed to “Johnny” care of the Manna post office. Inscription: “You can count on me.”
+3 A death mask of President McKinley
+4 A fossil of a fish with red candle wax dripped all over it
+5 A buck’s head, stuffed and mounted, mouth agape, glass eyes wild with terror. It is impossible for anyone to sleep with this thing in the same room with them.
+6 A photo of five U.S. soldiers in Vietnam-era uniforms, arms around each-others’ shoulders.
