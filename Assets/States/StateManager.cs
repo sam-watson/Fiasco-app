@@ -7,6 +7,7 @@ public class StateManager : MonoBehaviour {
 	
 	public GameObject browserPanel;
 	public GameObject viewerPanel;
+	public GameObject elementsPanel;
 	public Prefabs prefabs;
 	
 	private PlaysetManager playsetManager;

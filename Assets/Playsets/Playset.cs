@@ -21,13 +21,28 @@ public class PlaysetInfo {
 
 public class PlaysetElements {
 	
+	public enum ElementType {
+		Relationships,
+		Needs,
+		Locations,
+		Objects
+	}
+	
 	public Dictionary<string, List<string>> relationships;
 	public Dictionary<string, List<string>> needs;
 	public Dictionary<string, List<string>> locations;
 	public Dictionary<string, List<string>> objects;
 	
-//	public PlaysetElements(Dictionary<string, List<string>> relationships, Dictionary<string, List<string>> needs,
-//		Dictionary<string, List<string>> locations, Dictionary<string, List<string>> objects) {
-//		this.relationships = relationships;
-//	}
+	public Dictionary<string, List<string>> GetElements (ElementType type) {
+		switch (type) {
+		case ElementType.Relationships:
+			return relationships;
+		case ElementType.Needs:
+			return needs;
+		case ElementType.Locations:
+			return locations;
+		default:
+			return objects;
+		}
+	}
 }

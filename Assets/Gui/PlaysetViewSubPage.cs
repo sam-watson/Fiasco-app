@@ -27,10 +27,10 @@ public class PlaysetViewSubPage : PageMap {
 		if (anchor == body) {
 			placement = table.gameObject;
 		} else placement = anchor.gameObject;
-		var label = NGUITools.AddChild(placement, prefab).GetComponent<UILabel>();
+		var label = NGUITools.AddChild(placement, prefab).GetComponentInChildren<UILabel>();
 		label.pivot = UIWidget.Pivot.Left;
 		if (anchor == body) {
-			table.Reposition();
+			table.Reposition(); //FIXME: called too much?
 		} else CorrectOffsets(anchor);
 		label.name = "a"; //prevent reordering
 		return label;

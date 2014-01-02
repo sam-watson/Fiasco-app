@@ -140,6 +140,6 @@ public class ViewPlaysetState : State {
 	}
 	
 	private void ViewDetails() {
-		new PlaysetDetailsState().Enter(new StateContext(initialContext.playset));
+		new PlaysetElementsState().Enter(new StateContext(initialContext.playset));
 	}
 }
