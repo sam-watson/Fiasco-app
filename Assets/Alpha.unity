@@ -1469,6 +1469,22 @@ Prefab:
       propertyPath: m_LocalRotation.w
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 100014, guid: 1ecacda08ca39e044a100df1226a6b48, type: 2}
+      propertyPath: m_Name
+      value: Header
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400024, guid: 1ecacda08ca39e044a100df1226a6b48, type: 2}
+      propertyPath: container
+      value: 
+      objectReference: {fileID: 1943487020}
+    - target: {fileID: 11400024, guid: 1ecacda08ca39e044a100df1226a6b48, type: 2}
+      propertyPath: side
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400024, guid: 1ecacda08ca39e044a100df1226a6b48, type: 2}
+      propertyPath: pixelOffset.x
+      value: 10
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 1ecacda08ca39e044a100df1226a6b48, type: 2}
   m_RootGameObject: {fileID: 257165268}
@@ -3021,7 +3037,7 @@ GameObject:
   - 4: {fileID: 1199603557}
   - 114: {fileID: 1199603558}
   m_Layer: 0
-  m_Name: Top
+  m_Name: Header
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3051,12 +3067,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   uiCamera: {fileID: 0}
-  container: {fileID: 740163102}
-  side: 3
+  container: {fileID: 1943487020}
+  side: 5
   halfPixelOffset: 1
   runOnlyOnce: 0
   relativeOffset: {x: 0, y: 0}
-  pixelOffset: {x: 0, y: 0}
+  pixelOffset: {x: 10, y: 0}
   widgetContainer: {fileID: 0}
 --- !u!1 &1258939789
 GameObject:
