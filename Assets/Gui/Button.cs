@@ -3,9 +3,9 @@ using System.Collections;
 
 public class Button : MonoBehaviour {
 	
-	private UIButton uiButton;
-	private UILabel uiLabel;
-	private Transform trans;
+	protected UIButton uiButton;
+	protected UILabel uiLabel;
+	protected Transform trans;
 	
 	private EventDelegate _onClick;
 	public EventDelegate OnClick {
@@ -54,7 +54,7 @@ public class Button : MonoBehaviour {
 	// A: button spawner and setup class
 	//*B: spawn button prefab and add/find button setup class
 	
-	void Awake() {
+	protected virtual void Awake() {
 		trans = transform;
 		trans.localPosition = new Vector3(0, 0, 0);
 		trans.localScale = new Vector3(1, 1, 1);
