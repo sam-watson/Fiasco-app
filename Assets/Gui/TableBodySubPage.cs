@@ -10,18 +10,24 @@ public class TableBodySubPage : PageMap {
 		table = body.gameObject.GetComponentInChildren<UITable>();
 	}
 	
-	public override UILabel AddLabel (UIAnchor anchor, GameObject prefab)
+	public override GameObject AddContent (UIAnchor anchor, GameObject prefab)
 	{
 		GameObject placement;
 		if (anchor == body) {
 			placement = table.gameObject;
 		} else placement = anchor.gameObject;
-		var label = NGUITools.AddChild(placement, prefab).GetComponentInChildren<UILabel>();
-		label.pivot = UIWidget.Pivot.Left;
+		var content = NGUITools.AddChild(placement, prefab);
+		content.name = "Content-" + prefab.name;
 		if (anchor == body) {
 			table.Reposition(); //FIXME: called too much?
 		} else CorrectOffsets(anchor);
-		label.name = "a"; //prevent reordering
+		return content;
+	}
+	
+	public override UILabel AddLabel (UIAnchor anchor, GameObject prefab)
+	{
+		var label = AddContent(anchor, prefab).GetComponentInChildren<UILabel>();
+		label.pivot = UIWidget.Pivot.Left;
 		return label;
 	}
 }

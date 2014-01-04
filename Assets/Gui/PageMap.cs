@@ -25,12 +25,17 @@ public class PageMap : MonoBehaviour {
 		}
 	}
 	
-	public virtual UILabel AddLabel(UIAnchor anchor, GameObject prefab) {
-		var label = NGUITools.AddChild(anchor.gameObject, prefab).GetComponent<UILabel>();
-		label.pivot = UIWidget.Pivot.Left;
+	public virtual GameObject AddContent(UIAnchor anchor, GameObject prefab) {
+		var content = NGUITools.AddChild(anchor.gameObject, prefab);
 		if (anchor != body) {
 			CorrectOffsets(anchor);
 		}
+		return content;
+	}
+	
+	public virtual UILabel AddLabel(UIAnchor anchor, GameObject prefab) {
+		var label = AddContent(anchor, prefab).GetComponent<UILabel>();
+		label.pivot = UIWidget.Pivot.Left;
 		return label;
 	}
 	
