@@ -54,12 +54,18 @@ public class PageMap : MonoBehaviour {
 		}
 	}
 	
+	/// <summary>
+	/// Gets the anchor. Won't return header, footer, or body anchors.
+	/// </summary>
 	public UIAnchor GetAnchor(UIAnchor.Side side) {
 		foreach (var anchor in anchors) {
-			if (anchor.side == side)
+			if (anchor.side == side && anchor!=head && anchor!=foot)
 				return anchor;
 		}
-		UIAnchor sorry = null;
-		return sorry;
+		return null;
+	}
+	
+	public virtual Transform GetTrans(UIAnchor angkor) {
+		return angkor.transform;
 	}
 }

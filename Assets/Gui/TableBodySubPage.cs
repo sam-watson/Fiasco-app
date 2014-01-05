@@ -30,4 +30,12 @@ public class TableBodySubPage : PageMap {
 		label.pivot = UIWidget.Pivot.Left;
 		return label;
 	}
+	
+	public override Transform GetTrans (UIAnchor angkor)
+	{
+		if (angkor == head) return head.transform;
+		if (angkor == body) return table.transform;
+		if (angkor == foot) return foot.transform;
+		return base.GetTrans (angkor);
+	}
 }
