@@ -17,9 +17,14 @@ public class PlaysetElementsState : State {
 		title.effectStyle = UILabel.Effect.Outline;
 		title.color = Color.red;
 		title.fontSize = 26;
-		var frame = pageMap.body.GetComponentInChildren<UIGrid>();
-		frame.cellWidth = Screen.width;
-		subPages = new List<ElementsSubPage>(frame.GetComponentsInChildren<ElementsSubPage>());
+		var grid = pageMap.body.GetComponentInChildren<UIGrid>();
+		grid.cellWidth = Screen.width;
+		subPages = new List<ElementsSubPage>(grid.GetComponentsInChildren<ElementsSubPage>());
+		if (subPages.Count == 0) { //or should it be if <4?
+			for (int i=0; i<4; i++) {
+				subPages.Add(NGUITools.AddChild(grid.gameObject, context.manager.prefabs.elementsSubPage).GetComponent<ElementsSubPage>());
+			}
+		}
 		SetUpButtons();
 		SetUpContents();
 	}
@@ -46,13 +51,7 @@ public class PlaysetElementsState : State {
 			topLabel.text = elementType.ToString();
 			topLabel.pivot = UIWidget.Pivot.Center;
 			var elements = playset.elements.GetElements(elementType);
-			foreach (var element in elements) {
-				var fab = subPage.AddContent(subPage.body, prefabs.elementsLabel);
-				var expLabel = fab.AddComponent<ExpandingButton>();
-				fab.AddComponent<UIDragPanelContents>();
-				expLabel.LabelText = element.Key;
-				expLabel.SetSubText(element.Value);
-			}
+			subPage.SetElements(elements);
 		}
 	}
 	

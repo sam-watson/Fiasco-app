@@ -8,4 +8,5 @@ public class Prefabs : MonoBehaviour {
 	public GameObject styledLabel;
 	public GameObject plainLabel;
 	public GameObject playsetSubPage;
+	public GameObject elementsSubPage;
 }
