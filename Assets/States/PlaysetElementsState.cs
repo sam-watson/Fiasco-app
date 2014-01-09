@@ -20,10 +20,9 @@ public class PlaysetElementsState : State {
 		var grid = pageMap.body.GetComponentInChildren<UIGrid>();
 		grid.cellWidth = Screen.width;
 		subPages = new List<ElementsSubPage>(grid.GetComponentsInChildren<ElementsSubPage>());
-		if (subPages.Count == 0) { //or should it be if <4?
-			for (int i=0; i<4; i++) {
-				subPages.Add(NGUITools.AddChild(grid.gameObject, context.manager.prefabs.elementsSubPage).GetComponent<ElementsSubPage>());
-			}
+		while (subPages.Count < 4) {
+			subPages.Add(
+				NGUITools.AddChild(grid.gameObject, context.manager.prefabs.elementsSubPage).GetComponent<ElementsSubPage>());
 		}
 		SetUpButtons();
 		SetUpContents();
@@ -50,6 +49,8 @@ public class PlaysetElementsState : State {
 			var topLabel = subPage.AddLabel(subPage.head, prefabs.styledLabel);
 			topLabel.text = elementType.ToString();
 			topLabel.pivot = UIWidget.Pivot.Center;
+			topLabel.effectStyle = UILabel.Effect.Shadow;
+			topLabel.effectColor = Color.red;
 			var elements = playset.elements.GetElements(elementType);
 			subPage.SetElements(elements);
 		}
