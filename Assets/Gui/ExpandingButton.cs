@@ -24,8 +24,6 @@ public class ExpandingButton : Button {
 		if (subText != null) {
 			SetSubText(subText, subPrefab);
 		}
-		TweenScale.Begin(tween.gameObject, 0f, new Vector3(1f, 0.01f, 0));
-		tween.gameObject.SetActive(false);
 	}
 	
 	public void SetSubText(List<string> textList) {
@@ -36,6 +34,7 @@ public class ExpandingButton : Button {
 		subText = textList;
 		subPrefab = prefab;
 		if (tweenTrans != null) {
+			tween.gameObject.SetActive(true);
 			subTable = tweenTrans.GetComponentInChildren<UITable>();
 			var tableTrans = subTable.transform;
 			NumberedLabel subLabel;
@@ -57,6 +56,8 @@ public class ExpandingButton : Button {
 				i++;
 			}
 			subTable.Reposition();
+			TweenScale.Begin(tween.gameObject, 0f, new Vector3(1f, 0.01f, 0));
+			tween.gameObject.SetActive(false);
 		}
 	}
 	
