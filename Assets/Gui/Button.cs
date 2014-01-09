@@ -3,8 +3,9 @@ using System.Collections;
 
 public class Button : MonoBehaviour {
 	
+	public UILabel uiLabel;
+	
 	protected UIButton uiButton;
-	protected UILabel uiLabel;
 	protected Transform trans;
 	
 	private EventDelegate _onClick;
@@ -59,7 +60,9 @@ public class Button : MonoBehaviour {
 		trans.localPosition = new Vector3(0, 0, 0);
 		trans.localScale = new Vector3(1, 1, 1);
 		uiButton = GetComponentInChildren<UIButton>();
-		uiLabel = GetComponentInChildren<UILabel>();
+		if (uiLabel == null) {
+			uiLabel = GetComponentInChildren<UILabel>();
+		}
 		IsEnabled = IsEnabled;
 		LabelText = LabelText;
 		OnClick = OnClick;

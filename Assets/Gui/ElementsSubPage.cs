@@ -26,7 +26,7 @@ public class ElementsSubPage : TableBodySubPage {
 		var tableTrans = table.transform;
 		var elementsPrefab = StateManager.Instance.prefabs.elementsLabel;
 		while (tableTrans.childCount < 6) {
-			var elementLabel = AddContent(body, elementsPrefab).AddComponent<ExpandingButton>();
+			var elementLabel = AddContent(body, elementsPrefab).GetComponent<ExpandingButton>();
 			elementLabels.Add(elementLabel);
 		}
 		SetElements(elements);
@@ -38,7 +38,9 @@ public class ElementsSubPage : TableBodySubPage {
 		if (elementLabels.Count != 6) return;
 		foreach (var elementList in elements) {
 			var expLabel = elementLabels[i];
-			expLabel.LabelText = elementList.Key;
+			var expLabelLabel = expLabel.GetComponentInChildren<NumberedLabel>();
+			expLabelLabel.LabelText = elementList.Key;
+			expLabelLabel.Number = i+1;
 			expLabel.SetSubText(elementList.Value);
 			i++;
 		}

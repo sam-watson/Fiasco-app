@@ -1328,7 +1328,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playsetButton: {fileID: 100000, guid: e647c6f75eb38184285e8deda0236df9, type: 2}
-  elementsLabel: {fileID: 100006, guid: 60a8282065e94d443be68215f0bb6179, type: 2}
+  elementsLabel: {fileID: 100012, guid: f61e7f26e7bcfee469a6aceaa50785e2, type: 2}
+  diceLabel: {fileID: 100000, guid: dd28be9e38ee4424ba06c7c954c2af92, type: 2}
   styledLabel: {fileID: 100000, guid: 11539ce8015a7a34b8e318a98a9a4528, type: 2}
   plainLabel: {fileID: 100000, guid: f831c6fac48491d4884039150c13f4dc, type: 2}
   playsetSubPage: {fileID: 100020, guid: 956fd59fea840dc46a72079db5ad915c, type: 2}
@@ -2360,6 +2361,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b93082725a36e4b46a5d0dad7006e8e5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  uiLabel: {fileID: 0}
 --- !u!1 &1482658612
 GameObject:
   m_ObjectHideFlags: 0
@@ -2404,6 +2406,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b93082725a36e4b46a5d0dad7006e8e5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  uiLabel: {fileID: 0}
 --- !u!65 &1482658615
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -2542,6 +2545,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b93082725a36e4b46a5d0dad7006e8e5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  uiLabel: {fileID: 0}
 --- !u!1 &1540337746
 GameObject:
   m_ObjectHideFlags: 0
@@ -2696,6 +2700,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b93082725a36e4b46a5d0dad7006e8e5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  uiLabel: {fileID: 0}
 --- !u!1001 &1612482421
 Prefab:
   m_ObjectHideFlags: 0
@@ -3145,6 +3150,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b93082725a36e4b46a5d0dad7006e8e5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  uiLabel: {fileID: 0}
 --- !u!1001 &1815347041
 Prefab:
   m_ObjectHideFlags: 0

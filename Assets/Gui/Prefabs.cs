@@ -5,6 +5,7 @@ public class Prefabs : MonoBehaviour {
 
 	public GameObject playsetButton;
 	public GameObject elementsLabel;
+	public GameObject diceLabel;
 	public GameObject styledLabel;
 	public GameObject plainLabel;
 	public GameObject playsetSubPage;

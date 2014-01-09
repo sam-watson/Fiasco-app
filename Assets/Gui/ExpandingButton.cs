@@ -29,7 +29,7 @@ public class ExpandingButton : Button {
 	}
 	
 	public void SetSubText(List<string> textList) {
-		SetSubText(textList, StateManager.Instance.prefabs.plainLabel);
+		SetSubText(textList, StateManager.Instance.prefabs.diceLabel);
 	}
 	
 	public void SetSubText(List<string> textList, GameObject prefab) {
@@ -38,24 +38,25 @@ public class ExpandingButton : Button {
 		if (tweenTrans != null) {
 			subTable = tweenTrans.GetComponentInChildren<UITable>();
 			var tableTrans = subTable.transform;
-			UILabel subLabel;
+			NumberedLabel subLabel;
 			int i = 0;
 			foreach (var text in subText) {
 				if ( i < tableTrans.childCount) {
-					subLabel = tableTrans.GetChild(i).GetComponent<UILabel>();
+					subLabel = tableTrans.GetChild(i).GetComponentInChildren<NumberedLabel>();
 				} else {
-					subLabel = NGUITools.AddChild(tableTrans.gameObject, subPrefab).GetComponent<UILabel>();
-					subLabel.pivot = UIWidget.Pivot.Left;
+					subLabel = NGUITools.AddChild(tableTrans.gameObject, subPrefab).GetComponentInChildren<NumberedLabel>();
+					subLabel.uiLabel.pivot = UIWidget.Pivot.Left;
 				}
 				i++;
-				subLabel.text = text;
+				subLabel.LabelText = text;
+				subLabel.Number = i;
 			}
 			while ( i < tableTrans.childCount) {
 				Debug.Log("culling extra subLabels");
 				Object.Destroy(tableTrans.GetChild(i).gameObject);
 				i++;
 			}
-			subTable.Reposition(); //NOTE: can't call this here, label widgets haven't initialized yet or something
+			subTable.Reposition();
 		}
 	}
 	
