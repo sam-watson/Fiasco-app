@@ -44,7 +44,7 @@ public class ExpandingButton : Button {
 					subLabel = tableTrans.GetChild(i).GetComponentInChildren<NumberedLabel>();
 				} else {
 					subLabel = NGUITools.AddChild(tableTrans.gameObject, subPrefab).GetComponentInChildren<NumberedLabel>();
-					subLabel.uiLabel.pivot = UIWidget.Pivot.Left;
+					subLabel.uiLabel.width = Screen.width - subLabel.numberLabel.width * 2;
 				}
 				i++;
 				subLabel.LabelText = text;
