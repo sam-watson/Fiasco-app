@@ -22,4 +22,13 @@ public class ElementsSuperPage : PageMap {
 			NGUITools.AddChild(grid.gameObject, StateManager.Instance.prefabs.elementsSubPage);
 		}
 	}
+	
+	public override UILabel AddLabel (UIAnchor anchor, GameObject prefab)
+	{
+		if (anchor == head) {
+			var label = anchor.GetComponentInChildren<UILabel>();
+			if (label != null) return label;
+		}
+		return base.AddLabel (anchor, prefab);
+	}
 }
