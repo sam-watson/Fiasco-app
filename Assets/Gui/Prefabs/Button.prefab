@@ -46,6 +46,7 @@ GameObject:
   - 114: {fileID: 11400008}
   - 114: {fileID: 11400006}
   - 65: {fileID: 6500002}
+  - 114: {fileID: 11400012}
   m_Layer: 0
   m_Name: Button
   m_TagString: Untagged
@@ -244,6 +245,18 @@ MonoBehaviour:
   initialSize: {x: 1, y: 1}
   borderPadding: {x: 0, y: 0}
   widgetContainer: {fileID: 0}
+--- !u!114 &11400012
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 100004}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b93082725a36e4b46a5d0dad7006e8e5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  uiLabel: {fileID: 0}
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1

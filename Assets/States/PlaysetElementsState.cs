@@ -6,11 +6,15 @@ public class PlaysetElementsState : State {
 	
 	private Playset playset;
 	private List<ElementsSubPage> subPages;
+	private UITweener tweener;
+	private Transform tweenerTrans;
 
 	public override void Enter (StateContext context)
 	{
 		base.Enter (context);
 		SetMenuPanel(context.manager.elementsPanel);
+		tweener = pageMap.body.GetComponentInChildren<UITweener>();
+		tweenerTrans = tweener.transform;
 		playset = context.playset;
 		var title = pageMap.AddLabel(pageMap.head, context.manager.prefabs.styledLabel);
 		title.text = playset.name;
@@ -37,7 +41,10 @@ public class PlaysetElementsState : State {
 	private void SetUpButtons() {
 		pageMap.GetAnchor(UIAnchor.Side.TopLeft).GetComponentInChildren<Button>()
 			.OnClick = new EventDelegate(Back);
-		
+		pageMap.GetAnchor(UIAnchor.Side.BottomLeft).GetComponentInChildren<Button>()
+			.OnClick = new EventDelegate(PrevElementSet);
+		pageMap.GetAnchor(UIAnchor.Side.BottomRight).GetComponentInChildren<Button>()
+			.OnClick = new EventDelegate(NextElementSet);
 		// TODO: swipe colliders, callback and stuff
 	}
 	
@@ -58,5 +65,27 @@ public class PlaysetElementsState : State {
 	
 	public void Back() {
 		new ViewPlaysetState().Enter(new StateContext(initialContext.playset));
+	}
+	
+	public void PrevElementSet() {
+		ScrollElementSet(-1);
+	}
+	
+	public void NextElementSet() {
+		ScrollElementSet(1);
+	}
+	
+	private void ScrollElementSet(int direction) {
+		ScrollElementSet(direction, 1f);
+	}
+	
+	private void ScrollElementSet(int direction, float time) {
+		var tweenerPos = tweenerTrans.localPosition;
+		var destX = Mathf.Clamp( GetCurrentMenuPos()+direction, 0, 3 ) * -Screen.width;
+		TweenPosition.Begin(tweener.gameObject, time, new Vector3(destX, tweenerPos.y, tweenerPos.z));
+	}
+	
+	private int GetCurrentMenuPos() {
+		return System.Convert.ToInt32(-tweenerTrans.localPosition.x / Screen.width);
 	}
 }
