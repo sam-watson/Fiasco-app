@@ -4,8 +4,9 @@ using System.Collections.Generic;
 
 public class PlaysetViewSubPage : TableBodySubPage {
 	
-	void Start() {
+	public override void Start() {
 		PositionStuff();
+		base.Start();
 	}
 	
 	private void PositionStuff() {

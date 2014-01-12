@@ -142,7 +142,7 @@ MonoBehaviour:
   mPivot: 4
   mWidth: 100
   mHeight: 100
-  mDepth: 0
+  mDepth: 2
   autoResizeBoxCollider: 1
   mAtlas: {fileID: 11400000, guid: f95e07e3d350bf748b0c42b453a69d2e, type: 2}
   mSpriteName: Dark
@@ -185,7 +185,7 @@ MonoBehaviour:
   mPivot: 4
   mWidth: 640
   mHeight: 16
-  mDepth: 0
+  mDepth: 2
   autoResizeBoxCollider: 0
   keepCrispWhenShrunk: 1
   mTrueTypeFont: {fileID: 12800000, guid: 864d99568b2f04943a55a1d573d0c321, type: 3}

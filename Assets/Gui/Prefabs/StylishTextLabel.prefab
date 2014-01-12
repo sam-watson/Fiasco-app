@@ -62,7 +62,7 @@ MonoBehaviour:
   mPivot: 4
   mWidth: 640
   mHeight: 16
-  mDepth: 0
+  mDepth: 6
   autoResizeBoxCollider: 0
   keepCrispWhenShrunk: 1
   mTrueTypeFont: {fileID: 12800000, guid: 864d99568b2f04943a55a1d573d0c321, type: 3}

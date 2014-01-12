@@ -3,9 +3,10 @@ using System.Collections;
 
 public class ElementsSuperPage : PageMap {
 
-	void Start() {
+	public override void Start() {
 		PositionStuff();
 		SetUpSubPages();
+		base.Start();
 	}
 	
 	private void PositionStuff() {

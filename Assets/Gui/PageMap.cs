@@ -8,21 +8,22 @@ public class PageMap : MonoBehaviour {
 	public UIAnchor body;
 	public UIAnchor foot;
 	public UISprite background;
+	public UIPanel framePanel;
 	
 	private List<UIAnchor> anchors = new List<UIAnchor>();
 	private Transform trans;
 	
-	
 	public virtual void Awake() {
 		trans = transform;
-		var allAnchors = gameObject.GetComponentsInChildren<UIAnchor>();
-		Debug.Log("Adjusting anchors");
-		foreach (var anchor in allAnchors) {
-			if (anchor.transform.parent == trans && anchor != body) {
-				anchors.Add(anchor);
-				CorrectOffsets(anchor);
-			}
+	}
+	
+	public virtual void Start() {
+		var frameAnchors = framePanel.GetComponentsInChildren<UIAnchor>(true);
+		foreach (var anchor in frameAnchors) {
+			anchors.Add(anchor);
+			CorrectOffsets(anchor);
 		}
+		AdjustDepths();
 	}
 	
 	public virtual GameObject AddContent(UIAnchor anchor, GameObject prefab) {
@@ -51,6 +52,23 @@ public class PageMap : MonoBehaviour {
 			anchor.pixelOffset.y = -bounds.extents.y;
 		} else if (anchorPos.Contains("Bottom")) {
 			anchor.pixelOffset.y = bounds.extents.y;
+		}
+	}
+	
+	public void AdjustDepths() {
+		/* Frame buttons should be in front of all else - depth 5
+		 * Headers and Footers at 3 or 4
+		 * Backgrounds at -1
+		 * Body and scrolling contents at 0 to 2
+		 * 
+		 * A)) Redesign scene to have widget sets separated by panels
+		 * 		- Frame elements, bg, header and footer, body
+		 */
+		NGUITools.PushBack(background.gameObject);
+		NGUITools.BringForward(framePanel.gameObject);
+		var parentPage = NGUITools.FindInParents<PageMap>(trans.parent.gameObject);
+		if (parentPage != null) {
+			parentPage.AdjustDepths();
 		}
 	}
 	

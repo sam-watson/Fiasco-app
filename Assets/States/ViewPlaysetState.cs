@@ -34,8 +34,9 @@ public class ViewPlaysetState : State {
 	
 	private void SetUpButtons() {
 		//FIXME: reset by new states, but still probably not good to have persistent elements referencing this object
-		pageMap.GetAnchor(UIAnchor.Side.TopLeft).GetComponentInChildren<Button>()
-			.OnClick = new EventDelegate(Back);
+		var ank = pageMap.GetAnchor(UIAnchor.Side.TopLeft);
+		var but = ank.GetComponentInChildren<Button>();
+		but.OnClick = new EventDelegate(Back);
 		pageMap.GetAnchor(UIAnchor.Side.BottomLeft).GetComponentInChildren<Button>()
 			.OnClick = new EventDelegate(PrevPlayset);
 		pageMap.GetAnchor(UIAnchor.Side.BottomRight).GetComponentInChildren<Button>()

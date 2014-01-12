@@ -7,9 +7,10 @@ public class ElementsSubPage : TableBodySubPage {
 	private List<ExpandingButton> elementLabels = new List<ExpandingButton>();
 	private Dictionary<string, List<string>> elements;
 	
-	void Start() {
+	public override void Start() {
 		PositionStuff();
 		SetUpContents();
+		base.Start();
 	}
 	
 	private void PositionStuff() {

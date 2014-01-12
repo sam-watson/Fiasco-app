@@ -273,6 +273,7 @@ MonoBehaviour:
   body: {fileID: 11400000}
   foot: {fileID: 11400004}
   background: {fileID: 11400022}
+  framePanel: {fileID: 0}
 --- !u!114 &11400008
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -518,7 +519,7 @@ MonoBehaviour:
   mPivot: 4
   mWidth: 480
   mHeight: 480
-  mDepth: 0
+  mDepth: 6
   autoResizeBoxCollider: 0
   mAtlas: {fileID: 11400000, guid: 24f5855283c15e641b59a134002220d2, type: 2}
   mSpriteName: Blank
