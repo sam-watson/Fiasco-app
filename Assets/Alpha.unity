@@ -2644,7 +2644,8 @@ Prefab:
       propertyPath: framePanel
       value: 
       objectReference: {fileID: 2113334411}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 11400076, guid: b048920ab16bf484ba6bc33a16f814ba, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: b048920ab16bf484ba6bc33a16f814ba, type: 2}
   m_RootGameObject: {fileID: 215418235}
   m_IsPrefabParent: 0
@@ -2661,7 +2662,6 @@ GameObject:
   - 114: {fileID: 1412432438}
   - 65: {fileID: 1412432437}
   - 114: {fileID: 1412432441}
-  - 114: {fileID: 1412432440}
   m_Layer: 0
   m_Name: Button
   m_TagString: Untagged
@@ -2729,19 +2729,6 @@ MonoBehaviour:
   duration: .200000003
   disabledColor: {r: .5, g: .5, b: .5, a: 1}
   onClick: []
---- !u!114 &1412432440
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 11400076, guid: b048920ab16bf484ba6bc33a16f814ba,
-    type: 2}
-  m_PrefabInternal: {fileID: 1355614134}
-  m_GameObject: {fileID: 1412432435}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b93082725a36e4b46a5d0dad7006e8e5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  uiLabel: {fileID: 0}
 --- !u!114 &1412432441
 MonoBehaviour:
   m_ObjectHideFlags: 0
