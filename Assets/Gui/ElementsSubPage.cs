@@ -8,14 +8,13 @@ public class ElementsSubPage : TableBodySubPage {
 	private Dictionary<string, List<string>> elements;
 	
 	public override void Start() {
+		base.Start();
 		PositionStuff();
 		SetUpContents();
-		base.Start();
 	}
 	
 	private void PositionStuff() {
-		var pageFrame = NGUITools.FindInParents<PageMap>(gameObject.transform.parent.gameObject);
-		var backButton = pageFrame.GetAnchor(UIAnchor.Side.TopLeft);
+		var backButton = parentPage.GetAnchor(UIAnchor.Side.TopLeft);
 		//place header below back button
 		head.pixelOffset.y += backButton.pixelOffset.y * 2;
 		//place body below header

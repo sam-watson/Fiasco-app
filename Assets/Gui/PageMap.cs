@@ -8,21 +8,27 @@ public class PageMap : MonoBehaviour {
 	public UIAnchor body;
 	public UIAnchor foot;
 	public UISprite background;
-	public UIPanel framePanel;
+	public UIPanel backPanel;
+	public UIPanel forePanel;
 	
-	private List<UIAnchor> anchors = new List<UIAnchor>();
-	private Transform trans;
+	protected PageMap parentPage;
+	//private List<PageMap> childPages = new List<PageMap>();	//needed?
+	protected Transform trans;
 	
 	public virtual void Awake() {
 		trans = transform;
 	}
 	
 	public virtual void Start() {
-		var frameAnchors = framePanel.GetComponentsInChildren<UIAnchor>(true);
-		foreach (var anchor in frameAnchors) {
-			anchors.Add(anchor);
-			CorrectOffsets(anchor);
+		parentPage = NGUITools.FindInParents<PageMap>(trans.parent.gameObject);
+		if (parentPage == null) {
+			Debug.Log(gameObject.name + " has NO parent page");
+		} else Debug.Log(gameObject.name + " has parent page " + parentPage.name);
+		if (background == null) {
+			background = GetAnchor(UIAnchor.Side.Center, backPanel.gameObject).GetComponent<UISprite>();
 		}
+		CorrectAllOffsets(backPanel.gameObject);
+		CorrectAllOffsets(forePanel.gameObject);
 		AdjustDepths();
 	}
 	
@@ -38,6 +44,12 @@ public class PageMap : MonoBehaviour {
 		var label = AddContent(anchor, prefab).GetComponent<UILabel>();
 		label.pivot = UIWidget.Pivot.Left;
 		return label;
+	}
+	
+	protected void CorrectAllOffsets(GameObject rootObject) {
+		foreach (var anchor in rootObject.GetComponentsInChildren<UIAnchor>()) {
+			CorrectOffsets(anchor);
+		}
 	}
 	
 	protected void CorrectOffsets(UIAnchor anchor) {
@@ -56,29 +68,31 @@ public class PageMap : MonoBehaviour {
 	}
 	
 	public void AdjustDepths() {
-		/* Frame buttons should be in front of all else - depth 5
-		 * Headers and Footers at 3 or 4
-		 * Backgrounds at -1
-		 * Body and scrolling contents at 0 to 2
-		 * 
-		 * A)) Redesign scene to have widget sets separated by panels
-		 * 		- Frame elements, bg, header and footer, body
+		/* Frame buttons et al should be in front of all else
+		 * Backgrounds behind
+		 * Body and scrolling contents somewhere between
 		 */
-		NGUITools.PushBack(background.gameObject);
-		NGUITools.BringForward(framePanel.gameObject);
-		var parentPage = NGUITools.FindInParents<PageMap>(trans.parent.gameObject);
+		NGUITools.PushBack(backPanel.gameObject);
+		NGUITools.BringForward(forePanel.gameObject);
 		if (parentPage != null) {
 			parentPage.AdjustDepths();
 		}
 	}
 	
-	/// <summary>
-	/// Gets the anchor. Won't return header, footer, or body anchors.
-	/// </summary>
 	public UIAnchor GetAnchor(UIAnchor.Side side) {
+		return GetAnchor(side, this.forePanel.gameObject);
+	}
+	
+	/// <summary>
+	/// Gets the first relevant anchor directly beneath game object.
+	/// </summary>
+	public UIAnchor GetAnchor(UIAnchor.Side side, GameObject go) {
+		var anchors = go.GetComponentsInChildren<UIAnchor>();
 		foreach (var anchor in anchors) {
-			if (anchor.side == side && anchor!=head && anchor!=foot)
+			if (anchor.side == side
+				&& anchor.transform.parent.gameObject == go) {
 				return anchor;
+			}
 		}
 		return null;
 	}

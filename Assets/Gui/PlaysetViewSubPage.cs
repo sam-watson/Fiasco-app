@@ -5,13 +5,12 @@ using System.Collections.Generic;
 public class PlaysetViewSubPage : TableBodySubPage {
 	
 	public override void Start() {
-		PositionStuff();
 		base.Start();
+		PositionStuff();
 	}
 	
 	private void PositionStuff() {
-		var pageFrame = NGUITools.FindInParents<PageMap>(gameObject.transform.parent.gameObject);
-		var backButton = pageFrame.GetAnchor(UIAnchor.Side.TopLeft);
+		var backButton = parentPage.GetAnchor(UIAnchor.Side.TopLeft);
 		//place header right of back button
 		head.pixelOffset.x += backButton.pixelOffset.x * 2;
 		head.pixelOffset.y = backButton.pixelOffset.y;

@@ -11,7 +11,7 @@ public class BrowsePlaysetsState : State {
 		menuPanel.SetActive(true);
 		var playsets = context.manager.Playsets;
 		//generate buttons linking to playset viewer states
-		var grid = menuPanel.GetComponentInChildren<UIGrid>();
+		var grid = pageMap.body.GetComponentInChildren<UIGrid>();
 		var gridTrans = grid.transform;
 		int i = 0;
 		foreach (Playset playset in playsets) {

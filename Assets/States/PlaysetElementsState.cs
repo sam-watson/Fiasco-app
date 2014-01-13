@@ -28,6 +28,7 @@ public class PlaysetElementsState : State {
 			subPages.Add(
 				NGUITools.AddChild(grid.gameObject, context.manager.prefabs.elementsSubPage).GetComponent<ElementsSubPage>());
 		}
+		grid.Reposition();
 		SetUpButtons();
 		SetUpContents();
 	}
