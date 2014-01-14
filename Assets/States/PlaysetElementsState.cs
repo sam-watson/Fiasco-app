@@ -5,7 +5,7 @@ using System.Collections.Generic;
 public class PlaysetElementsState : State {
 	
 	private Playset playset;
-	private List<ElementsSubPage> subPages;
+	private List<PlaysetElementsSubPage> subPages;
 	private UITweener tweener;
 	private Transform tweenerTrans;
 
@@ -23,21 +23,15 @@ public class PlaysetElementsState : State {
 		title.fontSize = 26;
 		var grid = pageMap.body.GetComponentInChildren<UIGrid>();
 		grid.cellWidth = Screen.width;
-		subPages = new List<ElementsSubPage>(grid.GetComponentsInChildren<ElementsSubPage>());
+		subPages = new List<PlaysetElementsSubPage>(grid.GetComponentsInChildren<PlaysetElementsSubPage>());
 		while (subPages.Count < 4) {
 			subPages.Add(
-				NGUITools.AddChild(grid.gameObject, context.manager.prefabs.elementsSubPage).GetComponent<ElementsSubPage>());
+				NGUITools.AddChild(grid.gameObject, context.manager.prefabs.elementsSubPage).GetComponent<PlaysetElementsSubPage>());
 		}
 		grid.Reposition();
 		SetUpButtons();
 		SetUpContents();
 	}
-	
-	//TODO: clear contents or rewrite contents
-	//TODO: subElement table set up via prefab script
-	//TODO: improve layout and positioning
-	//TODO: element navigation buttons
-	//TODO: dice symbols
 	
 	private void SetUpButtons() {
 		pageMap.GetAnchor(UIAnchor.Side.TopLeft).GetComponentInChildren<Button>()
@@ -56,7 +50,6 @@ public class PlaysetElementsState : State {
 			var elementType = (PlaysetElements.ElementType)i;
 			var topLabel = subPage.AddLabel(subPage.head, prefabs.styledLabel);
 			topLabel.text = elementType.ToString();
-			topLabel.pivot = UIWidget.Pivot.Center;
 			topLabel.effectStyle = UILabel.Effect.Shadow;
 			topLabel.effectColor = Color.red;
 			var elements = playset.elements.GetElements(elementType);
@@ -65,7 +58,7 @@ public class PlaysetElementsState : State {
 	}
 	
 	public void Back() {
-		new ViewPlaysetState().Enter(new StateContext(initialContext.playset));
+		new PlaysetInfoState().Enter(new StateContext(initialContext.playset));
 	}
 	
 	public void PrevElementSet() {

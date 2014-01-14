@@ -2,7 +2,7 @@
 using System.Collections;
 using System.Collections.Generic;
 
-public class ElementsSubPage : TableBodySubPage {
+public class PlaysetElementsSubPage : TableBodySubPage {
 	
 	private List<ExpandingButton> elementLabels = new List<ExpandingButton>();
 	private Dictionary<string, List<string>> elements;
@@ -16,9 +16,9 @@ public class ElementsSubPage : TableBodySubPage {
 	private void PositionStuff() {
 		var backButton = parentPage.GetAnchor(UIAnchor.Side.TopLeft);
 		//place header below back button
-		head.pixelOffset.y += backButton.pixelOffset.y * 2;
+		head.pixelOffset.y = backButton.pixelOffset.y * 2.5f;
 		//place body below header
-		body.pixelOffset.y += head.pixelOffset.y * 2;
+		body.pixelOffset.y = backButton.pixelOffset.y * 3;
 		table.padding = new Vector2(10, 5);
 	}
 	

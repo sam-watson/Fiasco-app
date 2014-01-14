@@ -2,12 +2,12 @@
 using System.Collections;
 using System.Collections.Generic;
 
-public class ViewPlaysetState : State {
+public class PlaysetInfoState : State {
 	
 	public Playset queuedPlayset;
 	
 	private static TweenPosition playsetPanel;
-	private static Dictionary<string, PlaysetViewSubPage> subPages;
+	private static Dictionary<string, PlaysetInfoSubPage> subPages;
 	private static bool setUp = false;
 
 	public override void Enter (StateContext context)
@@ -48,12 +48,12 @@ public class ViewPlaysetState : State {
 	private void SetUpPlaysets(StateContext context) {
 		playsetPanel = pageMap.body.GetComponentInChildren<TweenPosition>();
 		var playsets = context.manager.Playsets;
-		subPages = new Dictionary<string, PlaysetViewSubPage>();
+		subPages = new Dictionary<string, PlaysetInfoSubPage>();
 		for (int i=0; i<playsets.Count; i++) {
 			var playset = playsets[ i ];
 			var subPage = NGUITools.AddChild(playsetPanel.gameObject, context.manager.prefabs.playsetSubPage).transform;
 			subPage.localPosition = new Vector3(i*Screen.width, 0, 0);
-			var subPageMap = subPage.gameObject.GetComponent<PlaysetViewSubPage>();
+			var subPageMap = subPage.gameObject.GetComponent<PlaysetInfoSubPage>();
 			SetUpSubPage(subPageMap, playset);
 			subPages.Add(playset.name, subPageMap);
 			ShowInfo(subPageMap, false, 0);
@@ -61,7 +61,7 @@ public class ViewPlaysetState : State {
 		setUp = true;
 	}
 	
-	private void SetUpSubPage(PlaysetViewSubPage subPage, Playset playset) {
+	private void SetUpSubPage(PlaysetInfoSubPage subPage, Playset playset) {
 		subPage.name = playset.name;
 		Debug.Log("Setting up "+ playset.name);
 		var hitchcockLabel = initialContext.manager.prefabs.styledLabel;
@@ -95,7 +95,7 @@ public class ViewPlaysetState : State {
 		return page.AddLabel(anchor, prefab);
 	}
 	
-	private void ShowInfo(PlaysetViewSubPage subPage, bool on, float speed) {
+	private void ShowInfo(PlaysetInfoSubPage subPage, bool on, float speed) {
 		float bgAlpha = 1f;
 		float txtAlpha = 0f;
 		if (on) {
@@ -109,7 +109,7 @@ public class ViewPlaysetState : State {
 	}
 	
 	public void Back() {
-		new BrowsePlaysetsState().Enter(new StateContext());
+		new PlaysetsMenuState().Enter(new StateContext());
 	}
 	
 	public void PrevPlayset() {
@@ -137,7 +137,7 @@ public class ViewPlaysetState : State {
 	}
 	
 	public void NewState() {
-		new ViewPlaysetState().Enter(new StateContext(queuedPlayset));
+		new PlaysetInfoState().Enter(new StateContext(queuedPlayset));
 	}
 	
 	private void ViewDetails() {

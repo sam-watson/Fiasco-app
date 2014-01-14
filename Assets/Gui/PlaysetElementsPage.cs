@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class ElementsSuperPage : PageMap {
+public class PlaysetElementsPage : PageMap {
 
 	public override void Start() {
 		base.Start();

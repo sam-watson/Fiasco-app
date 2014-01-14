@@ -2,7 +2,7 @@
 using System.Collections;
 using System.Collections.Generic;
 
-public class PlaysetViewSubPage : TableBodySubPage {
+public class PlaysetInfoSubPage : TableBodySubPage {
 	
 	public override void Start() {
 		base.Start();

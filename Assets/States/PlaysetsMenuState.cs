@@ -2,7 +2,7 @@
 using System.Collections;
 using System.Collections.Generic;
 
-public class BrowsePlaysetsState : State {
+public class PlaysetsMenuState : State {
 	
 	public override void Enter (StateContext context)
 	{

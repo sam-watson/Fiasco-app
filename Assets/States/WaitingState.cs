@@ -1,4 +1,4 @@
-﻿using UnityEngine;
+using UnityEngine;
 using System.Collections;
 
 public class WaitingState : State {
@@ -12,6 +12,6 @@ public class WaitingState : State {
 	}
 	
 	private void GoToBrowsePlaysets() {
-		new BrowsePlaysetsState().Enter(new StateContext());
+		new PlaysetsMenuState().Enter(new StateContext());
 	}
 }

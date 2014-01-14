@@ -1,4 +1,4 @@
-﻿using UnityEngine;
+using UnityEngine;
 using System.Collections;
 
 public class PlaysetButton : Button {
@@ -16,6 +16,6 @@ public class PlaysetButton : Button {
 	}
 	
 	private void GoToPlaysetView() {
-		new ViewPlaysetState().Enter(new StateContext(Playset));
+		new PlaysetInfoState().Enter(new StateContext(Playset));
 	}
 }
