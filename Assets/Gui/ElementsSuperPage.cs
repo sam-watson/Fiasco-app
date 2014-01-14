@@ -14,6 +14,7 @@ public class ElementsSuperPage : PageMap {
 		//place header right of back button  (same as PlaysetViewSP)
 		head.pixelOffset.x = backButton.pixelOffset.x * 2;
 		head.pixelOffset.y = backButton.pixelOffset.y;
+		head.relativeOffset.x = 0.05f;
 	}
 	
 	private void SetUpSubPages() {

@@ -24,13 +24,6 @@ public class TableBodySubPage : PageMap {
 		return content;
 	}
 	
-	public override UILabel AddLabel (UIAnchor anchor, GameObject prefab)
-	{
-		var label = AddContent(anchor, prefab).GetComponentInChildren<UILabel>();
-		label.pivot = UIWidget.Pivot.Left;
-		return label;
-	}
-	
 	public override Transform GetTrans (UIAnchor angkor)
 	{
 		if (angkor == head) return head.transform;

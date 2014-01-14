@@ -41,7 +41,7 @@ public class PageMap : MonoBehaviour {
 	}
 	
 	public virtual UILabel AddLabel(UIAnchor anchor, GameObject prefab) {
-		var label = AddContent(anchor, prefab).GetComponent<UILabel>();
+		var label = AddContent(anchor, prefab).GetComponentInChildren<UILabel>();
 		label.pivot = UIWidget.Pivot.Left;
 		label.transform.localPosition = Vector3.zero;
 		return label;

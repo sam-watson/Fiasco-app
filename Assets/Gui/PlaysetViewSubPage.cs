@@ -12,8 +12,9 @@ public class PlaysetViewSubPage : TableBodySubPage {
 	private void PositionStuff() {
 		var backButton = parentPage.GetAnchor(UIAnchor.Side.TopLeft);
 		//place header right of back button
-		head.pixelOffset.x += backButton.pixelOffset.x * 2;
+		head.pixelOffset.x = backButton.pixelOffset.x * 2;
 		head.pixelOffset.y = backButton.pixelOffset.y;
+		head.relativeOffset.x = 0.05f;
 		//place body below header
 		body.pixelOffset.y += head.pixelOffset.y *2;
 		table.padding = new Vector2(10, 5);
