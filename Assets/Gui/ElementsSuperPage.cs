@@ -4,15 +4,15 @@ using System.Collections;
 public class ElementsSuperPage : PageMap {
 
 	public override void Start() {
+		base.Start();
 		PositionStuff();
 		SetUpSubPages();
-		base.Start();
 	}
 	
 	private void PositionStuff() {
 		var backButton = GetAnchor(UIAnchor.Side.TopLeft);
 		//place header right of back button  (same as PlaysetViewSP)
-		head.pixelOffset.x += backButton.pixelOffset.x * 2;
+		head.pixelOffset.x = backButton.pixelOffset.x * 2;
 		head.pixelOffset.y = backButton.pixelOffset.y;
 	}
 	

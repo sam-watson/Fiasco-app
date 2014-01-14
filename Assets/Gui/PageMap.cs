@@ -43,12 +43,15 @@ public class PageMap : MonoBehaviour {
 	public virtual UILabel AddLabel(UIAnchor anchor, GameObject prefab) {
 		var label = AddContent(anchor, prefab).GetComponent<UILabel>();
 		label.pivot = UIWidget.Pivot.Left;
+		label.transform.localPosition = Vector3.zero;
 		return label;
 	}
 	
 	protected void CorrectAllOffsets(GameObject rootObject) {
 		foreach (var anchor in rootObject.GetComponentsInChildren<UIAnchor>()) {
-			CorrectOffsets(anchor);
+			if (anchor.transform.parent.gameObject == rootObject) {
+				CorrectOffsets(anchor);
+			}
 		}
 	}
 	
