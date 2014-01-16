@@ -328,7 +328,7 @@ MonoBehaviour:
   hideInactive: 1
   keepWithinPanel: 0
   repositionNow: 0
-  padding: {x: 0, y: 4}
+  padding: {x: 20, y: 4}
 --- !u!114 &11400006
 MonoBehaviour:
   m_ObjectHideFlags: 1
