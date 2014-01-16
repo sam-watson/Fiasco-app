@@ -5,8 +5,19 @@ public class Button : MonoBehaviour {
 	
 	public UILabel uiLabel;
 	
-	protected UIButton uiButton;
 	protected Transform trans;
+	protected UIButton uiButton;
+	protected UIStretch uiStretch;
+	
+	private bool screenStretch;
+	private StretchType stretchType = StretchType.None;
+	private Vector2 stretchValues;
+	
+	public enum StretchType {
+		None,
+		Pixel,
+		Relative
+	}
 	
 	private EventDelegate _onClick;
 	public EventDelegate OnClick {
@@ -52,6 +63,7 @@ public class Button : MonoBehaviour {
 			}
 		}
 	}
+	
 	// A: button spawner and setup class
 	//*B: spawn button prefab and add/find button setup class
 	
@@ -69,5 +81,29 @@ public class Button : MonoBehaviour {
 		IsEnabled = IsEnabled;
 		LabelText = LabelText;
 		OnClick = OnClick;
+		uiStretch = GetComponentInChildren<UIStretch>();
+		if (uiStretch != null) {
+			SetStretch(screenStretch, stretchType, stretchValues);
+		}
+	}
+	
+	public void SetStretch(bool screen, StretchType offsetType, Vector2 offsetValues) {
+		screenStretch = screen;
+		stretchType = offsetType;
+		stretchValues = offsetValues;
+		if (uiStretch == null) return;
+		uiStretch.container = screen ? null : uiLabel.gameObject;
+		switch (offsetType) {
+		case StretchType.Pixel:
+			uiStretch.borderPadding = offsetValues;
+			uiStretch.relativeSize = Vector2.one;
+			break;
+		case StretchType.Relative:
+			uiStretch.relativeSize = offsetValues;
+			break;
+		default:
+			break;
+		}
+		return;
 	}
 }

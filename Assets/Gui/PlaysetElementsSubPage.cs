@@ -17,9 +17,14 @@ public class PlaysetElementsSubPage : TableBodySubPage {
 		var backButton = parentPage.GetAnchor(UIAnchor.Side.TopLeft);
 		//place header below back button
 		head.pixelOffset.y = backButton.pixelOffset.y * 2.5f;
-		//place body below header
-		body.pixelOffset.y = backButton.pixelOffset.y * 3;
 		table.padding = new Vector2(10, 5);
+		var scrollPanel = body.GetComponentInChildren<UIPanel>();
+		scrollPanel.clipping = UIDrawCall.Clipping.SoftClip;
+		scrollPanel.clipSoftness = new Vector2(1f, 10f);
+		var clipHeight = Screen.height - Mathf.Abs( head.pixelOffset.y * 2f );
+		scrollPanel.clipRange =
+			new Vector4(Screen.width/2f, -Screen.height/2f, Screen.width, clipHeight);
+		scrollPanel.GetComponent<UIDraggablePanel>().RestrictWithinBounds(true);
 	}
 	
 	private void SetUpContents() {
@@ -42,6 +47,7 @@ public class PlaysetElementsSubPage : TableBodySubPage {
 			expLabelLabel.LabelText = elementList.Key;
 			expLabelLabel.Number = i+1;
 			expLabel.SetSubText(elementList.Value);
+			expLabel.SetStretch(true, Button.StretchType.Pixel, table.padding*2f);
 			i++;
 		}
 	}

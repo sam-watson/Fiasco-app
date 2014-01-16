@@ -266,7 +266,7 @@ MonoBehaviour:
   mClipping: 0
   mClipRange: {x: 0, y: 0, z: 0, w: 0}
   mClipSoftness: {x: 40, y: 40}
-  mDepth: 12
+  mDepth: 11
 --- !u!114 &11400006
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -360,7 +360,7 @@ MonoBehaviour:
   container: {fileID: 0}
   style: 1
   runOnlyOnce: 0
-  relativeSize: {x: 1, y: 1}
+  relativeSize: {x: .899999976, y: 1}
   initialSize: {x: 1, y: 1}
   borderPadding: {x: 0, y: 0}
   widgetContainer: {fileID: 0}

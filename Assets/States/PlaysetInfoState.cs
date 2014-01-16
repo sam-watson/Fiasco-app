@@ -23,7 +23,7 @@ public class PlaysetInfoState : State {
 			SetUpPlaysets(context); }
 		var curPos = new Vector3(-viewIndex*Screen.width, 0, 0);
 		TweenPosition.Begin(playsetPanel.gameObject, 0, curPos);
-		ShowInfo(subPages[playset.name], true, 1f);
+		ShowInfo(subPages[playset.name], true, 0.5f);
 	}
 	
 	public override void Exit ()
@@ -78,12 +78,10 @@ public class PlaysetInfoState : State {
 		var body = subPage.body;
 		var subtitle = AddLabel(subPage, body, hitchcockLabel);
 		subtitle.text = playset.info.subtitle;
-		subtitle.fontStyle = FontStyle.Bold;
 		var summary = AddLabel(subPage, body, plainLabel);
 		summary.text = playset.info.summary;
 		var movienight = AddLabel(subPage, body, hitchcockLabel);
 		movienight.text = "Movie Night:";
-		movienight.fontStyle = FontStyle.Bold;
 		var movies = AddLabel(subPage, body, plainLabel);
 		movies.text = playset.info.movienight;
 		movies.fontStyle = FontStyle.Italic;
@@ -99,7 +97,7 @@ public class PlaysetInfoState : State {
 		float bgAlpha = 1f;
 		float txtAlpha = 0f;
 		if (on) {
-			bgAlpha = 0.2f;
+			bgAlpha = 0.15f;
 			txtAlpha = 1f;
 		}
 		TweenAlpha.Begin(subPage.background.gameObject, speed, bgAlpha);
@@ -122,18 +120,19 @@ public class PlaysetInfoState : State {
 	
 	private void ChangePlayset(int screenTween) {
 		var pageBody = pageMap.body.gameObject;
+		var tweener = pageBody.GetComponentInChildren<UITweener>();
 		var playsets = initialContext.manager.Playsets;
 		var viewIndex = playsets.IndexOf(initialContext.playset);
 		var newPs = Mathf.Clamp(screenTween + viewIndex, 0, playsets.Count-1);
 		queuedPlayset = playsets[ newPs ];
-		Debug.Log("Queue up "+ queuedPlayset + ", index " + newPs);
+		//Debug.Log("Queue up "+ queuedPlayset + ", index " + newPs);
 		screenTween = queuedPlayset==initialContext.playset ? 0 : screenTween;
-		var tweener = pageBody.GetComponentInChildren<UITweener>();
-		tweener.onFinished = new List<EventDelegate>(){new EventDelegate(NewState)};
+		tweener.onFinished = (screenTween == 0) ?
+			new List<EventDelegate>() : new List<EventDelegate>(){new EventDelegate(NewState)};
 		var tweenerPos = tweener.transform.localPosition;
 		var dest = new Vector3(tweenerPos.x-screenTween*Screen.width, tweenerPos.y, tweenerPos.z);
-		Debug.Log("Move " + screenTween + ": "+ screenTween*Screen.width + ", from " + tweenerPos.x + "to "+ dest.x);
-		TweenPosition.Begin(tweener.gameObject, 1f, dest);
+		//Debug.Log("Move " + screenTween + ": "+ screenTween*Screen.width + ", from " + tweenerPos.x + "to "+ dest.x);
+		TweenPosition.Begin(tweener.gameObject, 0.5f, dest);
 	}
 	
 	public void NewState() {

@@ -408,7 +408,7 @@ GameObject:
   - 4: {fileID: 215418236}
   - 114: {fileID: 215418239}
   m_Layer: 0
-  m_Name: InfoViewer
+  m_Name: Info
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -612,9 +612,9 @@ Transform:
   m_LocalPosition: {x: -.5, y: .5, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
-  - {fileID: 1993126871}
   - {fileID: 257165269}
   - {fileID: 215418236}
+  - {fileID: 1993126871}
   m_Father: {fileID: 935566762}
 --- !u!114 &246156632
 MonoBehaviour:
@@ -994,7 +994,7 @@ Prefab:
       objectReference: {fileID: 935566763}
     - target: {fileID: 100008, guid: a17547da44a972f4f86042fb3efb8da8, type: 2}
       propertyPath: m_Name
-      value: Browser
+      value: PlaysetsMenu
       objectReference: {fileID: 0}
     - target: {fileID: 11400018, guid: a17547da44a972f4f86042fb3efb8da8, type: 2}
       propertyPath: body
@@ -1400,7 +1400,6 @@ MonoBehaviour:
   plainLabel: {fileID: 100000, guid: f831c6fac48491d4884039150c13f4dc, type: 2}
   playsetSubPage: {fileID: 100020, guid: 956fd59fea840dc46a72079db5ad915c, type: 2}
   elementsSubPage: {fileID: 100010, guid: afd232bf51b90634e8f2296609d3dcd4, type: 2}
-  FUCK: {fileID: 100000, guid: 7024ab1739dd7d042aa397a9e5e74340, type: 2}
 --- !u!1001 &721319456
 Prefab:
   m_ObjectHideFlags: 0
@@ -1442,7 +1441,7 @@ Prefab:
       objectReference: {fileID: 935566763}
     - target: {fileID: 100018, guid: b048920ab16bf484ba6bc33a16f814ba, type: 2}
       propertyPath: m_Name
-      value: InfoViewer
+      value: Info
       objectReference: {fileID: 0}
     - target: {fileID: 11400042, guid: b048920ab16bf484ba6bc33a16f814ba, type: 2}
       propertyPath: uiCamera
@@ -2115,7 +2114,7 @@ MonoBehaviour:
   mClipping: 0
   mClipRange: {x: 0, y: 0, z: 0, w: 0}
   mClipSoftness: {x: 40, y: 40}
-  mDepth: 6
+  mDepth: 13
 --- !u!1 &1003896986
 GameObject:
   m_ObjectHideFlags: 0
@@ -2276,7 +2275,7 @@ MonoBehaviour:
   mClipping: 0
   mClipRange: {x: 0, y: 0, z: 0, w: 0}
   mClipSoftness: {x: 40, y: 40}
-  mDepth: 6
+  mDepth: 13
 --- !u!1 &1199603556
 GameObject:
   m_ObjectHideFlags: 0
@@ -2592,7 +2591,7 @@ MonoBehaviour:
   mClipping: 0
   mClipRange: {x: 0, y: 0, z: 0, w: 0}
   mClipSoftness: {x: 40, y: 40}
-  mDepth: 14
+  mDepth: 13
 --- !u!1 &1321657072
 GameObject:
   m_ObjectHideFlags: 0
@@ -2803,7 +2802,7 @@ MonoBehaviour:
   mClipping: 0
   mClipRange: {x: 0, y: 0, z: 0, w: 0}
   mClipSoftness: {x: 40, y: 40}
-  mDepth: 14
+  mDepth: 13
 --- !u!1 &1482658612
 GameObject:
   m_ObjectHideFlags: 0
@@ -3050,6 +3049,10 @@ Prefab:
     - target: {fileID: 100044, guid: 1ecacda08ca39e044a100df1226a6b48, type: 2}
       propertyPath: m_Name
       value: Secondary
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400074, guid: 1ecacda08ca39e044a100df1226a6b48, type: 2}
+      propertyPath: mClipping
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 1ecacda08ca39e044a100df1226a6b48, type: 2}
@@ -3779,7 +3782,7 @@ MonoBehaviour:
   mClipping: 0
   mClipRange: {x: 0, y: 0, z: 0, w: 0}
   mClipSoftness: {x: 40, y: 40}
-  mDepth: 14
+  mDepth: 13
 --- !u!1 &1822693724
 GameObject:
   m_ObjectHideFlags: 0
@@ -4123,7 +4126,7 @@ GameObject:
   - 4: {fileID: 1993126871}
   - 114: {fileID: 1993126874}
   m_Layer: 0
-  m_Name: Browser
+  m_Name: PlaysetsMenu
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4374,4 +4377,4 @@ MonoBehaviour:
   mClipping: 0
   mClipRange: {x: 0, y: 0, z: 0, w: 0}
   mClipSoftness: {x: 40, y: 40}
-  mDepth: 14
+  mDepth: 13
