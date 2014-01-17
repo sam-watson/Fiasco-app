@@ -280,7 +280,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   uiCamera: {fileID: 0}
-  container: {fileID: 740163102}
+  container: {fileID: 0}
   side: 0
   halfPixelOffset: 1
   runOnlyOnce: 0
@@ -1048,6 +1048,66 @@ Prefab:
       propertyPath: m_LocalScale.z
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: a17547da44a972f4f86042fb3efb8da8, type: 2}
+      propertyPath: m_LocalScale.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: a17547da44a972f4f86042fb3efb8da8, type: 2}
+      propertyPath: m_LocalScale.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: a17547da44a972f4f86042fb3efb8da8, type: 2}
+      propertyPath: m_LocalScale.z
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 400012, guid: a17547da44a972f4f86042fb3efb8da8, type: 2}
+      propertyPath: m_LocalScale.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 400012, guid: a17547da44a972f4f86042fb3efb8da8, type: 2}
+      propertyPath: m_LocalScale.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 400012, guid: a17547da44a972f4f86042fb3efb8da8, type: 2}
+      propertyPath: m_LocalScale.z
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 400014, guid: a17547da44a972f4f86042fb3efb8da8, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400014, guid: a17547da44a972f4f86042fb3efb8da8, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400014, guid: a17547da44a972f4f86042fb3efb8da8, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400012, guid: a17547da44a972f4f86042fb3efb8da8, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400012, guid: a17547da44a972f4f86042fb3efb8da8, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400012, guid: a17547da44a972f4f86042fb3efb8da8, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: a17547da44a972f4f86042fb3efb8da8, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: a17547da44a972f4f86042fb3efb8da8, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: a17547da44a972f4f86042fb3efb8da8, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: a17547da44a972f4f86042fb3efb8da8, type: 2}
   m_RootGameObject: {fileID: 1993126870}
@@ -1740,8 +1800,8 @@ Transform:
   m_PrefabInternal: {fileID: 386519136}
   m_GameObject: {fileID: 852657751}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -.00208349992, y: .627133489, z: .000122080062}
-  m_LocalScale: {x: .00416666688, y: .00416666688, z: .00416666688}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1773286192}
 --- !u!114 &852657753
@@ -2072,7 +2132,7 @@ Transform:
   m_PrefabInternal: {fileID: 386519136}
   m_GameObject: {fileID: 995617303}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 8.00192356e-05, y: -8.00192356e-05, z: -1.68755651e-05}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1773286192}
@@ -2591,7 +2651,7 @@ MonoBehaviour:
   mClipping: 0
   mClipRange: {x: 0, y: 0, z: 0, w: 0}
   mClipSoftness: {x: 40, y: 40}
-  mDepth: 13
+  mDepth: 14
 --- !u!1 &1321657072
 GameObject:
   m_ObjectHideFlags: 0
@@ -2802,7 +2862,7 @@ MonoBehaviour:
   mClipping: 0
   mClipRange: {x: 0, y: 0, z: 0, w: 0}
   mClipSoftness: {x: 40, y: 40}
-  mDepth: 13
+  mDepth: 14
 --- !u!1 &1482658612
 GameObject:
   m_ObjectHideFlags: 0
@@ -3053,6 +3113,14 @@ Prefab:
     - target: {fileID: 11400074, guid: 1ecacda08ca39e044a100df1226a6b48, type: 2}
       propertyPath: mClipping
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400014, guid: 1ecacda08ca39e044a100df1226a6b48, type: 2}
+      propertyPath: container
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400030, guid: 1ecacda08ca39e044a100df1226a6b48, type: 2}
+      propertyPath: container
+      value: 
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 1ecacda08ca39e044a100df1226a6b48, type: 2}
@@ -3606,6 +3674,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 1773286192}
+  - 114: {fileID: 1773286193}
   m_Layer: 0
   m_Name: Top
   m_TagString: Untagged
@@ -3620,11 +3689,30 @@ Transform:
   m_PrefabInternal: {fileID: 386519136}
   m_GameObject: {fileID: 1773286191}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: .499919981, y: -.499919981, z: -.0292799976}
-  m_LocalScale: {x: 239.980804, y: 239.980804, z: 239.980804}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 852657752}
   m_Father: {fileID: 995617304}
+--- !u!114 &1773286193
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1773286191}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c8077b76001d36d489868d20d28bddb9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  uiCamera: {fileID: 0}
+  container: {fileID: 0}
+  side: 3
+  halfPixelOffset: 1
+  runOnlyOnce: 0
+  relativeOffset: {x: 0, y: 0}
+  pixelOffset: {x: 0, y: 0}
+  widgetContainer: {fileID: 0}
 --- !u!1 &1785680177
 GameObject:
   m_ObjectHideFlags: 0
@@ -3782,7 +3870,7 @@ MonoBehaviour:
   mClipping: 0
   mClipRange: {x: 0, y: 0, z: 0, w: 0}
   mClipSoftness: {x: 40, y: 40}
-  mDepth: 13
+  mDepth: 14
 --- !u!1 &1822693724
 GameObject:
   m_ObjectHideFlags: 0
@@ -4205,7 +4293,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   uiCamera: {fileID: 0}
-  container: {fileID: 740163102}
+  container: {fileID: 0}
   side: 6
   halfPixelOffset: 1
   runOnlyOnce: 0
@@ -4377,4 +4465,4 @@ MonoBehaviour:
   mClipping: 0
   mClipRange: {x: 0, y: 0, z: 0, w: 0}
   mClipSoftness: {x: 40, y: 40}
-  mDepth: 13
+  mDepth: 14
