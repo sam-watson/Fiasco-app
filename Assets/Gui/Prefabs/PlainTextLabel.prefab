@@ -65,7 +65,7 @@ MonoBehaviour:
   mDepth: 6
   autoResizeBoxCollider: 0
   keepCrispWhenShrunk: 1
-  mTrueTypeFont: {fileID: -371720515, guid: 0000000000000000d000000000000000, type: 0}
+  mTrueTypeFont: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
   mFont: {fileID: 0}
   mText: New Label
   mFontSize: 16
