@@ -23,62 +23,64 @@ public class PlaysetManager : MonoBehaviour {
 			var infoText = (TextAsset)Resources.Load(playsetName + "/" + playsetName + " Info");
 			playset.info = JsonMapper.ToObject<PlaysetInfo>(infoText.text);
 			var elementText = (TextAsset)Resources.Load(playsetName + "/" + playsetName + " Elements");
-			playset.elements = ParseElements(elementText.text);
+			playset.elements = new ElementParser().ParseElements(elementText.text);
 			//TODO: images
 			playsets.Add(playset);
 			Debug.Log("Loading... " + playsets.IndexOf(playset) + ": " + playset.name);
 		}
 	}
+}
+	
+public class ElementParser {
+	
+	PlaysetElements elements;
+	int elemType = 0;
+	Dictionary<string, List<string>> elemDict;
+	string curKey;
+	int keyElemNum;
+	int subElemNum;
+	int diceNum;
+	int diceSize = 6;
+	
+	private void Init() {
+		elements = new PlaysetElements();
+		//set vars to trigger a new cycle and dictionary
+		elemType = -1;
+		keyElemNum = diceSize;
+		subElemNum = diceSize;
+	}
 	
 	public PlaysetElements ParseElements(string bunchoText) {
-		var elements = new PlaysetElements();
-		int c = 0;
-		elements.relationships = ElementParser(bunchoText, ref c);
-		elements.needs = ElementParser(bunchoText, ref c);
-		elements.locations = ElementParser(bunchoText, ref c);
-		elements.objects = ElementParser(bunchoText, ref c);
+		Init();
+		char[] eols = {'\r', '\n'};
+		string[] elementStrings = bunchoText.Split(eols, System.StringSplitOptions.RemoveEmptyEntries);
+		foreach (var elemString in elementStrings) {
+			if (!System.Int32.TryParse(elemString.Substring(0,2), out diceNum)) {
+				break; //unnumbered line
+			}
+			if (!PlaceElement(diceNum, elemString.Substring(2))) {
+				break; //finished or misnumbered element list == stop
+			}
+		}
 		return elements;
 	}
 	
-	private Dictionary<string, List<string>> ElementParser(string readStr, ref int c) {
-		//iterate through big string looking for numbers and new-lines, 6 sets of 6
-		var element = new Dictionary<string, List<string>>();
-		for (int i=1; i<=6; i++) {
-			string keyStr;
-			keyStr = SubElementParser(readStr, ref c, i);
-			var subElems = new List<string>();
-			for (int ii=1; ii<=6; ii++) {
-				subElems.Add(SubElementParser(readStr, ref c, ii));
-			}
-			element.Add(keyStr, subElems);
-		}
-		//verify
-		bool complete = true;
-		if (element.Count != 6) {complete = false;}
-		foreach (var subElem in element.Values) {
-			if (subElem.Count != 6) {complete = false;}
-		}
-		if (complete == false) {Debug.Log("*** problem parsing playset elements!!! ***");}
-		
-		return element;
-	}
-	
-	private string SubElementParser(string readStr, ref int c, int i) {
-		string buildStr = "";
-		if ( readStr[c].ToString() == i.ToString() && readStr[c+1].ToString() == " ") {
-			c = c+2;
-			//Debug.Log("----number found");
-		}
-		while ( c < readStr.Length ) {
-			if ( readStr[c] == (char)13 && readStr[c+1] == (char)10 ) {
-				//Debug.Log("----escape found");
-				c = c+2;
-				break;
-			} else {
-				buildStr += readStr[c].ToString();
-				c++;
-			}
-		}
-		return buildStr;
+	private bool PlaceElement(int diceNum, string elemString) {
+		if (subElemNum < diceSize && diceNum == ++subElemNum) {
+			elemDict[curKey].Add(elemString);
+			return true;
+		} else if (keyElemNum < diceSize && diceNum == ++keyElemNum) {
+			elemDict.Add(elemString, new List<string>());
+			curKey = elemString;
+			subElemNum = 0;
+			return true;
+		} else if (System.Enum.IsDefined(typeof(PlaysetElements.ElementType), ++elemType)) {
+			elemDict = elements.GetElements(elemType);
+			elemDict.Add(elemString, new List<string>());
+			curKey = elemString;
+			keyElemNum = 1;
+			subElemNum = 0;
+			return true;
+		} else return false; //parsing finished or number mismatch
 	}
 }

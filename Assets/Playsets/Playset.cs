@@ -28,10 +28,10 @@ public class PlaysetElements {
 		Objects
 	}
 	
-	public Dictionary<string, List<string>> relationships;
-	public Dictionary<string, List<string>> needs;
-	public Dictionary<string, List<string>> locations;
-	public Dictionary<string, List<string>> objects;
+	public Dictionary<string, List<string>> relationships = new Dictionary<string, List<string>>();
+	public Dictionary<string, List<string>> needs = new Dictionary<string, List<string>>();
+	public Dictionary<string, List<string>> locations = new Dictionary<string, List<string>>();
+	public Dictionary<string, List<string>> objects = new Dictionary<string, List<string>>();
 	
 	public Dictionary<string, List<string>> GetElements (ElementType type) {
 		switch (type) {
@@ -44,5 +44,9 @@ public class PlaysetElements {
 		default:
 			return objects;
 		}
+	}
+	
+	public Dictionary<string, List<string>> GetElements (int typeNum) {
+		return GetElements((ElementType)typeNum);
 	}
 }
