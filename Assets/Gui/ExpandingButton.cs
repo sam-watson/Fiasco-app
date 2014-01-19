@@ -4,6 +4,7 @@ using System.Collections.Generic;
 
 public class ExpandingButton : Button {
 	
+	private UIDraggablePanel panel;
 	private GameObject subPrefab;
 	private UITable subTable;
 	private List<string> subText;
@@ -24,6 +25,7 @@ public class ExpandingButton : Button {
 		if (subText != null) {
 			SetSubText(subText, subPrefab);
 		}
+		panel = NGUITools.FindInParents<UIDraggablePanel>(gameObject);
 	}
 	
 	public void SetSubText(List<string> textList) {
@@ -68,12 +70,26 @@ public class ExpandingButton : Button {
 		if (alreadyOpen) {
 			tween.onFinished.Add(new EventDelegate(TweenToggleOff));
 		} else {
+			tween.onFinished.Add(new EventDelegate(RespectBounds));
 			tween.gameObject.SetActive(true);
 		}
+		FocusPanel();
+	}
+	
+	public void FocusPanel() {
+		var newPos = panel.transform.worldToLocalMatrix.MultiplyPoint3x4(trans.position);
+		var panTran = panel.transform;
+		newPos.x = panTran.localPosition.x;
+		newPos.y += panTran.parent.localPosition.y/2f;
+		SpringPanel.Begin(panel.gameObject, -newPos, 2f);
 	}
 	
 	public void TweenToggleOff() {
 		tween.gameObject.SetActive(false);
 		tween.onFinished.Clear(); //assumes no other behavior given to tween
+	}
+	
+	public void RespectBounds() {
+		panel.RestrictWithinBounds(false);
 	}
 }

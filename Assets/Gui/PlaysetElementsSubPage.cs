@@ -4,6 +4,7 @@ using System.Collections.Generic;
 
 public class PlaysetElementsSubPage : TableBodySubPage {
 	
+	private UIDraggablePanel dragPanel;
 	private List<ExpandingButton> elementLabels = new List<ExpandingButton>();
 	private Dictionary<string, List<string>> elements;
 	
@@ -19,12 +20,15 @@ public class PlaysetElementsSubPage : TableBodySubPage {
 		head.pixelOffset.y = backButton.pixelOffset.y * 2.5f;
 		table.padding = new Vector2(10, 5);
 		var scrollPanel = body.GetComponentInChildren<UIPanel>();
+		dragPanel = scrollPanel.GetComponent<UIDraggablePanel>();
 		scrollPanel.clipping = UIDrawCall.Clipping.SoftClip;
 		scrollPanel.clipSoftness = new Vector2(1f, 10f);
 		var clipHeight = Screen.height - Mathf.Abs( head.pixelOffset.y * 2f );
 		scrollPanel.clipRange =
 			new Vector4(Screen.width/2f, -Screen.height/2f, Screen.width, clipHeight);
-		scrollPanel.GetComponent<UIDraggablePanel>().RestrictWithinBounds(true);
+		dragPanel.RestrictWithinBounds(true);
+//		var pos = dragPanel.transform.localPosition;
+//		dragPanel.relativePositionOnReset = new Vector2(pos.x, pos.y);
 	}
 	
 	private void SetUpContents() {
@@ -35,6 +39,7 @@ public class PlaysetElementsSubPage : TableBodySubPage {
 			elementLabels.Add(elementLabel);
 		}
 		SetElements(elements);
+		//dragPanel.ResetPosition();
 	}
 	
 	public void SetElements(Dictionary<string, List<string>> elements) {
