@@ -1,7 +1,7 @@
-1 FRIENDSHIP
+Ôªø1 FRIENDSHIP
 1 Friends with benefits
 2 Went to high school together
-3 ìYou let me down when I needed it most!î
+3 ‚ÄúYou let me down when I needed it most!‚Äù
 4 Fought side by side in the war
 5 Friendship ended after one humiliated the other
 6 Spiritual advisor / truth-seeker
@@ -15,8 +15,8 @@
 3 crime
 1 Blood brothers in the Kansas City Mafia
 2 Mortal enemies in the Kansas City Mafia
-3 Together, planned and executed a daring, drunken theft of the badger from its pen in Mannaís tiny zoo
-4 Watched June Alexanderís murder and did nothing to stop it
+3 Together, planned and executed a daring, drunken theft of the badger from its pen in Manna‚Äôs tiny zoo
+4 Watched June Alexander‚Äôs murder and did nothing to stop it
 5 Got caught setting a fire
 6 Did three years together in Lansing Correctional Facility
 4 COMMUNITY
@@ -24,7 +24,7 @@
 2 VFW Post 1161
 3 Manna First Baptist Church
 4 Manna high school football
-5 National Pony Express Association, ìan all-volunteer, non-profit historical organization for the purpose of identifying, reestablishing, and marking the original pony express trailî
+5 National Pony Express Association, ‚Äúan all-volunteer, non-profit historical organization for the purpose of identifying, reestablishing, and marking the original pony express trail‚Äù
 6 Bingo!
 5 romance
 1 Forbidden love
@@ -48,12 +48,12 @@
 5 ... and everyone has to know it was you
 6 ... for the good of America
 2 TO GET OUT
-1 Ö of these handcuffs
-2 Ö of sight for a while
-3 ... of your ìrelationshipî
+1 ‚Ä¶ of these handcuffs
+2 ‚Ä¶ of sight for a while
+3 ... of your ‚Äúrelationship‚Äù
 4 ... of a promise you made
 5 ... of your marriage
-6 Ö of your contract
+6 ‚Ä¶ of your contract
 3 TO GET RESPECT
 1 ... by making everyone afraid of you
 2 ... by making everyone mad at you
@@ -64,16 +64,16 @@
 4 TO GET LAID
 1 ... because she can protect me
 2 ... because I can use him to get what I really want
-3 ... because thatís what you do when you are deeply in love
+3 ... because that‚Äôs what you do when you are deeply in love
 4 ... because I want to hurt someone else
 5 ... to propagate your superior bloodline
 6 ... to prove you are not the slightest bit gay
 5 TO GET RICH
-1 ... and you donít care who you have to hurt to get it
+1 ... and you don‚Äôt care who you have to hurt to get it
 2 ... but no one can know it was you
 3 ... and everyone has to know it was you
 4 ... right now!
-5 ... but the money isnít for you. Itís for somebody who needs it bad.
+5 ... but the money isn‚Äôt for you. It‚Äôs for somebody who needs it bad.
 6 ... enough to buy your safety
 6 TO GET THE TRUTH
 1 ... for the good of America
@@ -86,8 +86,8 @@
 1 In the dry swimming pool, currently filled with dead leaves
 2 The flagpole, flying a crisp American flag
 3 The trunk of a car
-4 Out by the road, where you can see whoís coming half a mile away
-5 The dumpster - vandals have spray-painted ìUSA #1î on it
+4 Out by the road, where you can see who‚Äôs coming half a mile away
+5 The dumpster - vandals have spray-painted ‚ÄúUSA #1‚Äù on it
 6 Under the old, spreading oak tree. This tree must have been alive for at least a hundred years.
 2 INSIDE
 1 A ransacked guest room with holes in the walls and ceiling
@@ -99,9 +99,9 @@
 3 OUT BACK
 1 The fuse box - a pair of wires runs from the box into the woods
 2 The tornado shelter, its steel door rusted thin
-3 Thereís just enough room for one person to squeeze between the fuel-oil tank and the outside wall of the office
+3 There‚Äôs just enough room for one person to squeeze between the fuel-oil tank and the outside wall of the office
 4 A gully leading down to Sumida Creek
-5 A laundry line with two sheets and a pair of menís boxer shorts clipped to it
+5 A laundry line with two sheets and a pair of men‚Äôs boxer shorts clipped to it
 6 Out by the long-neglected lawnmower
 4 EMPLOYEES ONLY
 1 The safe
@@ -115,7 +115,7 @@
 2 The railroad tracks
 3 Sumida Creek Lake
 4 A clearing in the woods, with a fire pit and a makeshift altar
-5 Ed Keithís buffalo ranch
+5 Ed Keith‚Äôs buffalo ranch
 6 The old cemetery, unused since the fifties
 6 IN TOWN
 1 Manna High School
@@ -134,10 +134,10 @@
 2 INFORMATION
 1 A WPA mural from 1940 in the lobby of the post office downtown
 2 A map showing the 19th-century maze of walkways and passages beneath the streets of Manna.
-3 Clipped from a magazine and carefully pressed in a book, an article about ìBrother Johnî Lazia, crime boss in the Kansas City Mafia
+3 Clipped from a magazine and carefully pressed in a book, an article about ‚ÄúBrother John‚Äù Lazia, crime boss in the Kansas City Mafia
 4 A photo of the 1931 all-Asian Manna High School football team
-5 A Polaroid of Sumida Creek Lake with a penciled ìXî
-6 A medal. The front side shows two men on horseback in mid-gallop exchanging a mailbag. One of the men is Caucasian; the other has distinctly Asian features. Motto: ìDuty drives us -- We stop for none.î The back side has the inscription, ì1931î.
+5 A Polaroid of Sumida Creek Lake with a penciled ‚ÄúX‚Äù
+6 A medal. The front side shows two men on horseback in mid-gallop exchanging a mailbag. One of the men is Caucasian; the other has distinctly Asian features. Motto: ‚ÄúDuty drives us -- We stop for none.‚Äù The back side has the inscription, ‚Äú1931‚Äù.
 3 WEAPONS
 1 A dagger with a bone handle and a wavy blade. The blade has the inscription, E PLURIBUS UNUM.
 2 Two gallons of gasoline
@@ -161,8 +161,8 @@
 6 A box of gold teeth
 6 SENTIMENTAL
 1 A U.S. Navy sea bag full of broken padlocks, all violently torn apart
-2 An unsigned postcard from Niagara Falls, postmarked 1934, addressed to ìJohnnyî care of the Manna post office. Inscription: ìYou can count on me.î
+2 An unsigned postcard from Niagara Falls, postmarked 1934, addressed to ‚ÄúJohnny‚Äù care of the Manna post office. Inscription: ‚ÄúYou can count on me.‚Äù
 3 A death mask of President McKinley
 4 A fossil of a fish with red candle wax dripped all over it
-5 A buckís head, stuffed and mounted, mouth agape, glass eyes wild with terror. It is impossible for anyone to sleep with this thing in the same room with them.
-6 A photo of five U.S. soldiers in Vietnam-era uniforms, arms around each-othersí shoulders.
+5 A buck‚Äôs head, stuffed and mounted, mouth agape, glass eyes wild with terror. It is impossible for anyone to sleep with this thing in the same room with them.
+6 A photo of five U.S. soldiers in Vietnam-era uniforms, arms around each-others‚Äô shoulders.

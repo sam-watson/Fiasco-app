@@ -1,4 +1,4 @@
-1 Family
+Ôªø1 Family
 1 Parent / child
 2 Cousins
 3 Bastard relation
@@ -41,50 +41,50 @@
 5 Custodial or secretarial staff
 6 Reporter / source
 1 To Serve the Mother Country
-1 Ö by finding infiltrators
-2 Ö by quashing dissent
-3 Ö by going to war / starting a new war
-4 Ö by toppling a corrupt system
-5 Ö by helping the little people
-6 Ö by preventing nuclear annihilation
+1 ‚Ä¶ by finding infiltrators
+2 ‚Ä¶ by quashing dissent
+3 ‚Ä¶ by going to war / starting a new war
+4 ‚Ä¶ by toppling a corrupt system
+5 ‚Ä¶ by helping the little people
+6 ‚Ä¶ by preventing nuclear annihilation
 2 To Get Rich
-1 Ö off the American people
-2 Ö by selling state secrets
-3 Ö by lying through your teeth
-4 Ö by landing a job in high finance
-5 Ö by stealing from the Man
-6 Ö by securing a government contract
+1 ‚Ä¶ off the American people
+2 ‚Ä¶ by selling state secrets
+3 ‚Ä¶ by lying through your teeth
+4 ‚Ä¶ by landing a job in high finance
+5 ‚Ä¶ by stealing from the Man
+6 ‚Ä¶ by securing a government contract
 3 To Get Respect
-1 Ö from your superiors, by advancing their goals
-2 Ö from constituents, by using pork-barrel politics
-3 Ö from the counterculture, by sticking it to the Man
-4 Ö after a major fuckup, by making things right
-5 Ö from a family member, by living up to the legacy
-6 Ö from yourself, by upholding your nationís ideals
+1 ‚Ä¶ from your superiors, by advancing their goals
+2 ‚Ä¶ from constituents, by using pork-barrel politics
+3 ‚Ä¶ from the counterculture, by sticking it to the Man
+4 ‚Ä¶ after a major fuckup, by making things right
+5 ‚Ä¶ from a family member, by living up to the legacy
+6 ‚Ä¶ from yourself, by upholding your nation‚Äôs ideals
 4 To Get the Truth
-1 Ö that will bring down the President
-2 Ö that will lead to the nukes being dismantled / deployed
-3 Ö to change the course of the war in Vietnam
-4 Ö to lead all people to enlightenment
-5 Ö during a communication breakdown
-6 Ö and reveal a superpowerís dirty laundry to its subjects
+1 ‚Ä¶ that will bring down the President
+2 ‚Ä¶ that will lead to the nukes being dismantled / deployed
+3 ‚Ä¶ to change the course of the war in Vietnam
+4 ‚Ä¶ to lead all people to enlightenment
+5 ‚Ä¶ during a communication breakdown
+6 ‚Ä¶ and reveal a superpower‚Äôs dirty laundry to its subjects
 5 To Get Even
-1 Ö with somebody you think is lying to you
-2 Ö with the country that betrayed you
-3 Ö with your old boss
-4 Ö with someone who used you as a political tool
-5 Ö with the enemies of your culture
-6 Ö with the rival who got all the breaks
+1 ‚Ä¶ with somebody you think is lying to you
+2 ‚Ä¶ with the country that betrayed you
+3 ‚Ä¶ with your old boss
+4 ‚Ä¶ with someone who used you as a political tool
+5 ‚Ä¶ with the enemies of your culture
+6 ‚Ä¶ with the rival who got all the breaks
 6 To Get Out
-1 Ö by defecting
-2 Ö by escaping with the money
-3 Ö of a relationship
-4 Ö of crushing responsibilities
-5 Ö of the lose-lose political game
-6 Ö of this square trip, man
+1 ‚Ä¶ by defecting
+2 ‚Ä¶ by escaping with the money
+3 ‚Ä¶ of a relationship
+4 ‚Ä¶ of crushing responsibilities
+5 ‚Ä¶ of the lose-lose political game
+6 ‚Ä¶ of this square trip, man
 1 Capitol Hill
 1 Walkway inside the Capitol Dome
-2 Senator or representativeís office
+2 Senator or representative‚Äôs office
 3 Supreme Court chambers
 4 Senate or House chambers
 5 The stacks of the Library of Congress
@@ -92,7 +92,7 @@
 2 Near the Mall
 1 Park bench near the Reflecting Pool
 2 Arlington National Cemetery
-3 Fordís Theatre
+3 Ford‚Äôs Theatre
 4 White House Press Corps offices
 5 National Air & Space Museum (under construction)
 6 Public restroom near the Lincoln Memorial
@@ -106,7 +106,7 @@
 4 Entertainment
 1 Eastern Market
 2 Kennedy Center for the Performing Arts
-3 The fishing boat ìBoondoggleî
+3 The fishing boat ‚ÄúBoondoggle‚Äù
 4 Carpenters concert
 5 Special exhibit at the National Gallery of Art
 6 Washington Capitals hockey game
@@ -114,7 +114,7 @@
 1 Well-stocked fallout shelter
 2 Unfinished subway tunnel
 3 Armed forces war room
-4 Militantsí lair
+4 Militants‚Äô lair
 5 The Pentagon basement, Ring G
 6 Parking garage
 6 Abroad: Back then, now, or soon
@@ -132,7 +132,7 @@
 5 Cracked codes
 6 Audio tapes from the White House
 2 Information
-1 Name and number of a politicianís mistress
+1 Name and number of a politician‚Äôs mistress
 2 Poorly researched report
 3 Incriminating photos
 4 Number of the red telephone
@@ -161,7 +161,7 @@
 6 Pen used to sign important legislation
 6 Weapon
 1 Revolver
-2 The nuclear ìfootballî briefcase
+2 The nuclear ‚Äúfootball‚Äù briefcase
 3 Tear gas canister
 4 Sword cane
 5 AK-47

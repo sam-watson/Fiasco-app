@@ -1,4 +1,4 @@
-1 FRIENDSHIP
+Ôªø1 FRIENDSHIP
 1 Grew up on neighboring farms
 2 Mutual outcasts
 3 Best friends
@@ -6,12 +6,12 @@
 5 Keepers of a dark secret
 6 Church friends (social enemies)
 2 FAMILY 
-1 You think youíre kin, but you arenít
+1 You think you‚Äôre kin, but you aren‚Äôt
 2 Siblings
 3 Parent and child
 4 Cousins
 5 Parent and son or daughter-in-law
-6 You donít think youíre kin, but you are
+6 You don‚Äôt think you‚Äôre kin, but you are
 3 crime
 1 Cooking the books on a building contract
 2 Farm machinery thief and fence
@@ -48,18 +48,18 @@
 5 ... with the scum who are dealing drugs in your town
 6 ... with that bitch Marcie Lowell
 2 TO GET OUT 
-1 Ö of a huge fucking obligation
-2 Ö of paying taxes on 500 acres of rotting soybeans
+1 ‚Ä¶ of a huge fucking obligation
+2 ‚Ä¶ of paying taxes on 500 acres of rotting soybeans
 3 ... of a relationship
-4 ... of a deal out at the airport thatís gone sour
+4 ... of a deal out at the airport that‚Äôs gone sour
 5 ... of your ill-chosen words to the cartel representative
-6 Ö of this county, to escape family and tradition
+6 ‚Ä¶ of this county, to escape family and tradition
 3 TO GET IN
 1 ... good with your rich, sick uncle
 2 ... shape, so you can impress Marcie Lowell
 3 ... the door at Centro de la Justicia Social, for a meal and a cot
 4 ... bed with the cops, by dropping a dime on someone
-5 ... deep with the serious guys in the Escalade up from Ju·rez
+5 ... deep with the serious guys in the Escalade up from Ju√°rez
 6 ... trouble like you used to, with your buddies, back in the day
 4 TO GET IT ON 
 1 ... with the incomparable Marcie Lowell
@@ -71,12 +71,12 @@
 5 TO GET RICH
 1 ... through building a runway out of shit materials
 2 ... through selling a baby
-3 ... through harvesting another farmerís crop
+3 ... through harvesting another farmer‚Äôs crop
 4 ... through forging a document
 5 ... through stealing farm machinery
 6 ... through shorting a drug dealer
 6 TO GET THE TRUTH 
-1 ... about Centro de la Justicia Socialís agenda
+1 ... about Centro de la Justicia Social‚Äôs agenda
 2 ... about the dirty contract for the new runway
 3 ... about Marcie Lowell
 4 ... about the weird guy who is harassing your mom
@@ -84,7 +84,7 @@
 6 ... about what goes on behind the grain elevators some nights
 1 EAST BRANCH ROAD
 1 Community Health Clinic
-2 Crandallís Seed Cleaner Service
+2 Crandall‚Äôs Seed Cleaner Service
 3 The Windmill Diner
 4 Parts Plus
 5 Centro de la Justicia Social
@@ -92,12 +92,12 @@
 2 WEST BRANCH ROAD 
 1 The old ConAgra grain elevator
 2 Victory Electrical Cooperative
-3 Farmerís Tool and Equipment
+3 Farmer‚Äôs Tool and Equipment
 4 West Branch IGA grocery
 5 The brand-new Progress Ethanol plant
-6 Shabís Bar
+6 Shab‚Äôs Bar
 3 SUCKER CREEK
-1 The drainage ditch ìparty caveî
+1 The drainage ditch ‚Äúparty cave‚Äù
 2 An abandoned farmstead, dishes still on the table
 3 The dog-fighting ring at the end of a long dirt road
 4 Deer-hunting swamp
@@ -106,7 +106,7 @@
 4 COUNTY ROAD SIXTEEN 
 1 The fireworks stand at the Jaguar Road intersection
 2 The Olsen place, 700 acres in corn
-3 Roads and the skeletons of houses; a sign saying ìStarfield Acresî
+3 Roads and the skeletons of houses; a sign saying ‚ÄúStarfield Acres‚Äù
 4 E.A. Hutchinson High School
 5 A split-level ranch with twenty cars parked in the front yard
 6 The Byrd place, foreclosed, crops tended by neighbors
@@ -151,7 +151,7 @@
 3 Blazing crop fire
 4 Unopened legal notice
 5 150 mile-per-hour category F-2 tornado
-6 Pieces of a carís brake system in a trash can
+6 Pieces of a car‚Äôs brake system in a trash can
 5 VALUABLES 
 1 A wedding ring with a big fucking rock
 2 Brand new John Deere 9870 STS combine with corn row header
@@ -164,5 +164,5 @@
 2 Antique grandfather clock with a hidden compartment
 3 Adoption certificate
 4 Live hand grenade brought back from Vietnam
-5 Childís treasure map
+5 Child‚Äôs treasure map
 6 Family Bible
