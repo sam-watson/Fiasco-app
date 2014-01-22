@@ -1,11 +1,13 @@
 ﻿using UnityEngine;
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 
 public class PlaysetElementsState : State {
 	
 	private Playset playset;
 	private List<PlaysetElementsSubPage> subPages;
+	private List<UIToggle> navButtons;
 	private UITweener tweener;
 	private Transform tweenerTrans;
 
@@ -15,6 +17,7 @@ public class PlaysetElementsState : State {
 		SetMenuPanel(context.manager.elementsPanel);
 		tweener = pageMap.body.GetComponentInChildren<UITweener>();
 		tweenerTrans = tweener.transform;
+		tweenerTrans.localPosition = Vector3.zero;
 		playset = context.playset;
 		var title = pageMap.AddLabel(pageMap.head, context.manager.prefabs.styledLabel);
 		title.text = playset.name;
@@ -40,7 +43,12 @@ public class PlaysetElementsState : State {
 			.OnClick = new EventDelegate(PrevElementSet);
 		pageMap.GetAnchor(UIAnchor.Side.BottomRight).GetComponentInChildren<Button>()
 			.OnClick = new EventDelegate(NextElementSet);
-		// TODO: swipe colliders, callback and stuff
+		navButtons = pageMap.GetAnchor(UIAnchor.Side.Bottom).GetComponentsInChildren<UIToggle>()
+			.OrderBy(t => t.gameObject.name).ToList();
+		foreach (var toggle in navButtons) {
+			EventDelegate.Add(toggle.onChange, NavToElementSet);
+		}
+		navButtons[0].value = true;
 	}
 	
 	private void SetUpContents() {
@@ -62,15 +70,20 @@ public class PlaysetElementsState : State {
 	}
 	
 	public void PrevElementSet() {
-		ScrollElementSet(-1);
+		//ScrollElementSet(-1);
+		navButtons[ Mathf.Clamp(GetCurrentMenuPos()-1, 0, 3) ].value = true;
 	}
 	
 	public void NextElementSet() {
-		ScrollElementSet(1);
+		//ScrollElementSet(1);
+		navButtons[ Mathf.Clamp(GetCurrentMenuPos()+1, 0, 3) ].value = true;
 	}
 	
-	private void ScrollElementSet(int direction) {
-		ScrollElementSet(direction, 1f);
+	public void NavToElementSet() {
+		int toPage = navButtons.IndexOf( UIToggle.current );
+		int moveBy = toPage - GetCurrentMenuPos();
+		float time = 0.2f;
+		ScrollElementSet( moveBy, time * Mathf.Abs(moveBy) );
 	}
 	
 	private void ScrollElementSet(int direction, float time) {

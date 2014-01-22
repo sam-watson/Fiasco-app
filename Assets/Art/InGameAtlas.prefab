@@ -67,8 +67,8 @@ MonoBehaviour:
     paddingTop: 0
     paddingBottom: 0
   - name: bg Manna Hotel
-    x: 0
-    y: 2047
+    x: 685
+    y: 3072
     width: 682
     height: 1024
     borderLeft: 0
@@ -93,8 +93,8 @@ MonoBehaviour:
     paddingTop: 0
     paddingBottom: 0
   - name: Fiasco-Back-Cover
-    x: 685
-    y: 3072
+    x: 0
+    y: 2047
     width: 682
     height: 1024
     borderLeft: 0
@@ -131,6 +131,58 @@ MonoBehaviour:
     paddingRight: 0
     paddingTop: 0
     paddingBottom: 0
+  - name: Locations
+    x: 683
+    y: 2048
+    width: 129
+    height: 119
+    borderLeft: 0
+    borderRight: 0
+    borderTop: 0
+    borderBottom: 0
+    paddingLeft: 9
+    paddingRight: 12
+    paddingTop: 21
+    paddingBottom: 10
+  - name: Needs
+    x: 1287
+    y: 2748
+    width: 133
+    height: 143
+    borderLeft: 0
+    borderRight: 0
+    borderTop: 0
+    borderBottom: 0
+    paddingLeft: 9
+    paddingRight: 8
+    paddingTop: 0
+    paddingBottom: 7
+  - name: Objects
+    x: 813
+    y: 2058
+    width: 119
+    height: 109
+    borderLeft: 0
+    borderRight: 0
+    borderTop: 0
+    borderBottom: 0
+    paddingLeft: 18
+    paddingRight: 13
+    paddingTop: 23
+    paddingBottom: 18
+  - name: Relationships
+    x: 933
+    y: 2053
+    width: 106
+    height: 114
+    borderLeft: 0
+    borderRight: 0
+    borderTop: 0
+    borderBottom: 0
+    paddingLeft: 24
+    paddingRight: 20
+    paddingTop: 26
+    paddingBottom: 10
   mPixelSize: 1
   mReplacement: {fileID: 0}
   mCoordinates: 0

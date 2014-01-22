@@ -4,6 +4,7 @@ using System.Collections;
 public class Button : MonoBehaviour {
 	
 	public UILabel uiLabel;
+	public UISprite background;
 	
 	protected Transform trans;
 	protected UIButton uiButton;
@@ -72,8 +73,8 @@ public class Button : MonoBehaviour {
 		trans.localPosition = new Vector3(0, 0, 0);
 		trans.localScale = new Vector3(1, 1, 1);
 		uiButton = GetComponentInChildren<UIButton>();
-		var uiSprite = GetComponentInChildren<UISprite>();
-		uiSprite.depth = 1;
+		background = GetComponentInChildren<UISprite>();
+		background.depth = 1;
 		if (uiLabel == null) {
 			uiLabel = GetComponentInChildren<UILabel>();
 		}

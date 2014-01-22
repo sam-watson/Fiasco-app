@@ -27,8 +27,6 @@ public class PlaysetElementsSubPage : TableBodySubPage {
 		scrollPanel.clipRange =
 			new Vector4(Screen.width/2f, -Screen.height/2f, Screen.width, clipHeight);
 		dragPanel.RestrictWithinBounds(true);
-//		var pos = dragPanel.transform.localPosition;
-//		dragPanel.relativePositionOnReset = new Vector2(pos.x, pos.y);
 	}
 	
 	private void SetUpContents() {
@@ -39,7 +37,6 @@ public class PlaysetElementsSubPage : TableBodySubPage {
 			elementLabels.Add(elementLabel);
 		}
 		SetElements(elements);
-		//dragPanel.ResetPosition();
 	}
 	
 	public void SetElements(Dictionary<string, List<string>> elements) {
