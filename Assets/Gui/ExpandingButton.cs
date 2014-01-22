@@ -86,7 +86,13 @@ public class ExpandingButton : Button {
 	
 	public void TweenToggleOff() {
 		tween.gameObject.SetActive(false);
+		RespectBounds();
 		tween.onFinished.Clear(); //assumes no other behavior given to tween
+	}
+	
+	public void TweenToggleOn() {
+		RespectBounds();
+		tween.onFinished.Clear();
 	}
 	
 	public void RespectBounds() {

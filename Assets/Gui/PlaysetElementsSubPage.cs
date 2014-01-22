@@ -62,4 +62,9 @@ public class PlaysetElementsSubPage : TableBodySubPage {
 		}
 		return base.AddLabel (anchor, prefab);
 	}
+	
+	public void RespectBounds() {
+		if (dragPanel != null)
+			dragPanel.RestrictWithinBounds(true);
+	}
 }
