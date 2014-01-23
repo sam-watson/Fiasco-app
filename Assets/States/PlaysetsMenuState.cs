@@ -13,8 +13,8 @@ public class PlaysetsMenuState : State {
 		//generate buttons linking to playset viewer states
 		var grid = pageMap.body.GetComponentInChildren<UIGrid>();
 		var gridTrans = grid.transform;
-		int i = 0;
-		foreach (Playset playset in playsets) {
+		int i;
+		for (i=0; i < playsets.Count; i++) {
 			GameObject buttonObj;
 			PlaysetButton button;
 			if ( i < gridTrans.childCount) {
@@ -29,11 +29,10 @@ public class PlaysetsMenuState : State {
 				buttonTrans.localScale = Vector3.one;
 				grid.cellHeight = NGUIMath.CalculateRelativeWidgetBounds(buttonTrans).size.y +5;
 			}
-			i++;
-			button.Playset = playset;
+			button.Playset = playsets[playsets.Count-i-1];
 			button.IsEnabled = true;
 		}
-		i = playsets.Count;
+		//i = playsets.Count;
 		while ( i < gridTrans.childCount) {
 			gridTrans.GetChild(i).GetComponentInChildren<Button>().IsEnabled = false;
 			i++;
