@@ -126,7 +126,7 @@ MonoBehaviour:
   mClipping: 0
   mClipRange: {x: 0, y: 0, z: 0, w: 0}
   mClipSoftness: {x: 40, y: 40}
-  mDepth: 11
+  mDepth: 6
 --- !u!114 &11400004
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -144,7 +144,7 @@ MonoBehaviour:
   mHeight: 100
   mDepth: 2
   autoResizeBoxCollider: 1
-  mAtlas: {fileID: 11400000, guid: f95e07e3d350bf748b0c42b453a69d2e, type: 2}
+  mAtlas: {fileID: 0}
   mSpriteName: Dark
   mFillCenter: 0
   mType: 1

@@ -2108,7 +2108,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   uiCamera: {fileID: 0}
   container: {fileID: 0}
-  style: 5
+  style: 6
   runOnlyOnce: 0
   relativeSize: {x: 1, y: 1}
   initialSize: {x: 1, y: 1}
@@ -3461,7 +3461,7 @@ MonoBehaviour:
   mClipping: 0
   mClipRange: {x: 0, y: 0, z: 0, w: 0}
   mClipSoftness: {x: 40, y: 40}
-  mDepth: 12
+  mDepth: 7
 --- !u!1 &1321657072
 GameObject:
   m_ObjectHideFlags: 0
@@ -3584,6 +3584,10 @@ Prefab:
     - target: {fileID: 6500026, guid: 1ecacda08ca39e044a100df1226a6b48, type: 2}
       propertyPath: m_Size.x
       value: 50
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400036, guid: 1ecacda08ca39e044a100df1226a6b48, type: 2}
+      propertyPath: style
+      value: 6
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 1ecacda08ca39e044a100df1226a6b48, type: 2}
@@ -3753,7 +3757,7 @@ MonoBehaviour:
   mClipping: 0
   mClipRange: {x: 0, y: 0, z: 0, w: 0}
   mClipSoftness: {x: 40, y: 40}
-  mDepth: 12
+  mDepth: 7
 --- !u!1 &1482658612
 GameObject:
   m_ObjectHideFlags: 0
@@ -5079,7 +5083,7 @@ MonoBehaviour:
   mClipping: 0
   mClipRange: {x: 0, y: 0, z: 0, w: 0}
   mClipSoftness: {x: 40, y: 40}
-  mDepth: 12
+  mDepth: 7
 --- !u!1 &1822693724
 GameObject:
   m_ObjectHideFlags: 0
@@ -5888,4 +5892,4 @@ MonoBehaviour:
   mClipping: 0
   mClipRange: {x: 0, y: 0, z: 0, w: 0}
   mClipSoftness: {x: 40, y: 40}
-  mDepth: 12
+  mDepth: 7
