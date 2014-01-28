@@ -4,10 +4,12 @@ using System.Collections.Generic;
 
 public class ExpandingButton : Button {
 	
-	private UIDraggablePanel panel;
+	private UIDraggablePanel dragPanel;
+	private UIPanel panel;
 	private GameObject subPrefab;
 	private UITable subTable;
 	private List<string> subText;
+	private float tableSize;
 	private TweenScale tween;
 	private Transform tweenTrans;
 	
@@ -25,7 +27,8 @@ public class ExpandingButton : Button {
 		if (subText != null) {
 			SetSubText(subText, subPrefab);
 		}
-		panel = NGUITools.FindInParents<UIDraggablePanel>(gameObject);
+		dragPanel = NGUITools.FindInParents<UIDraggablePanel>(gameObject);
+		panel = dragPanel.panel;
 	}
 	
 	public void SetSubText(List<string> textList) {
@@ -40,6 +43,7 @@ public class ExpandingButton : Button {
 			subTable = tweenTrans.GetComponentInChildren<UITable>();
 			var tableTrans = subTable.transform;
 			NumberedLabel subLabel;
+			tableSize = 0;
 			int i = 0;
 			foreach (var text in subText) {
 				if ( i < tableTrans.childCount) {
@@ -51,6 +55,7 @@ public class ExpandingButton : Button {
 				i++;
 				subLabel.LabelText = text;
 				subLabel.Number = i;
+				tableSize += subLabel.uiLabel.height;
 			}
 			while ( i < tableTrans.childCount) {
 				Debug.Log("culling extra subLabels");
@@ -70,18 +75,9 @@ public class ExpandingButton : Button {
 		if (alreadyOpen) {
 			tween.onFinished.Add(new EventDelegate(TweenToggleOff));
 		} else {
-			tween.onFinished.Add(new EventDelegate(RespectBounds));
+			tween.onFinished.Add(new EventDelegate(TweenToggleOn));
 			tween.gameObject.SetActive(true);
 		}
-		FocusPanel();
-	}
-	
-	public void FocusPanel() {
-		var newPos = panel.transform.worldToLocalMatrix.MultiplyPoint3x4(trans.position);
-		var panTran = panel.transform;
-		newPos.x = panTran.localPosition.x;
-		newPos.y += panTran.parent.localPosition.y/2f;
-		SpringPanel.Begin(panel.gameObject, -newPos, 2f);
 	}
 	
 	public void TweenToggleOff() {
@@ -91,11 +87,17 @@ public class ExpandingButton : Button {
 	}
 	
 	public void TweenToggleOn() {
-		RespectBounds();
+		var bounds = NGUIMath.CalculateAbsoluteWidgetBounds(tweenTrans);
+		if (!panel.IsVisible(bounds.min)) {
+			var panTrans = panel.transform;
+			var toPos = new Vector3(panTrans.localPosition.x, panTrans.localPosition.y + tableSize +10f, 0);
+			//Debug.Log("MOVE THE FUCK " + panTrans.localPosition + " TO " + toPos);
+			SpringPanel.Begin(panel.gameObject, toPos, 10f);
+		}
 		tween.onFinished.Clear();
 	}
 	
 	public void RespectBounds() {
-		panel.RestrictWithinBounds(false);
+		dragPanel.RestrictWithinBounds(false);
 	}
 }
