@@ -78,15 +78,20 @@ public class PlaysetInfoState : State {
 		var body = subPage.body;
 		var subtitle = AddLabel(subPage, body, hitchcockLabel);
 		subtitle.text = playset.info.subtitle;
+		subtitle.fontSize = 22;
 		var summary = AddLabel(subPage, body, plainLabel);
 		summary.text = playset.info.summary;
+		summary.fontSize = 22;
 		var movienight = AddLabel(subPage, body, hitchcockLabel);
 		movienight.text = "Movie Night:";
+		movienight.fontSize = 22;
 		var movies = AddLabel(subPage, body, plainLabel);
 		movies.text = playset.info.movienight;
+		movies.fontSize = 22;
 		movies.fontStyle = FontStyle.Italic;
 		var credits = AddLabel(subPage, body, plainLabel);
 		credits.text = "CREDITS: " + playset.info.credits;
+		credits.fontSize = 22;
 	}
 	
 	private UILabel AddLabel(PageMap page, UIAnchor anchor, GameObject prefab) {
