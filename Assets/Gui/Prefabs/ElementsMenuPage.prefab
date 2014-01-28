@@ -1248,7 +1248,7 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 99.9999924, y: 50, z: 0}
+  m_Size: {x: 50, y: 50, z: 0}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!65 &6500014
 BoxCollider:
@@ -1284,7 +1284,7 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 99.9999924, y: 50, z: 0}
+  m_Size: {x: 50, y: 50, z: 0}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!65 &6500020
 BoxCollider:
@@ -1296,7 +1296,7 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 99.9999924, y: 50, z: 0}
+  m_Size: {x: 50, y: 50, z: 0}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!65 &6500022
 BoxCollider:
@@ -1332,7 +1332,7 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 100, y: 50, z: 0}
+  m_Size: {x: 50, y: 50, z: 0}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!114 &11400000
 MonoBehaviour:
@@ -1571,7 +1571,7 @@ MonoBehaviour:
   mClipping: 0
   mClipRange: {x: 0, y: 0, z: 0, w: 0}
   mClipSoftness: {x: 40, y: 40}
-  mDepth: 7
+  mDepth: 12
 --- !u!114 &11400022
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1717,10 +1717,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   uiCamera: {fileID: 0}
   container: {fileID: 0}
-  style: 5
+  style: 6
   runOnlyOnce: 0
   relativeSize: {x: 1, y: 1}
-  initialSize: {x: 1, y: 1}
+  initialSize: {x: 1, y: 1.5}
   borderPadding: {x: 0, y: 0}
   widgetContainer: {fileID: 0}
 --- !u!114 &11400038
@@ -1751,7 +1751,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   mColor: {r: .738806009, g: 0, b: 0, a: 1}
   mPivot: 4
-  mWidth: 100
+  mWidth: 50
   mHeight: 50
   mDepth: 2
   autoResizeBoxCollider: 1
@@ -1793,7 +1793,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   uiCamera: {fileID: 0}
-  container: {fileID: 100008}
+  container: {fileID: 0}
   side: 7
   halfPixelOffset: 1
   runOnlyOnce: 0
@@ -2153,7 +2153,7 @@ MonoBehaviour:
   mClipping: 0
   mClipRange: {x: 0, y: 0, z: 0, w: 0}
   mClipSoftness: {x: 40, y: 40}
-  mDepth: 7
+  mDepth: 12
 --- !u!114 &11400076
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2476,7 +2476,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   mColor: {r: .738806009, g: 0, b: 0, a: 1}
   mPivot: 4
-  mWidth: 100
+  mWidth: 50
   mHeight: 50
   mDepth: 2
   autoResizeBoxCollider: 1
@@ -2500,7 +2500,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   mColor: {r: .738806009, g: 0, b: 0, a: 1}
   mPivot: 4
-  mWidth: 100
+  mWidth: 50
   mHeight: 50
   mDepth: 2
   autoResizeBoxCollider: 1
@@ -2852,7 +2852,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   mColor: {r: .738806009, g: 0, b: 0, a: 1}
   mPivot: 4
-  mWidth: 100
+  mWidth: 50
   mHeight: 50
   mDepth: 2
   autoResizeBoxCollider: 1
