@@ -4,7 +4,6 @@ using System.Collections.Generic;
 
 public class PlaysetElementsSubPage : TableBodySubPage {
 	
-	private UIDraggablePanel dragPanel;
 	private List<ExpandingButton> elementLabels = new List<ExpandingButton>();
 	private Dictionary<string, List<string>> elements;
 	
@@ -18,15 +17,17 @@ public class PlaysetElementsSubPage : TableBodySubPage {
 		var backButton = parentPage.GetAnchor(UIAnchor.Side.TopLeft);
 		//place header below back button
 		head.pixelOffset.y = backButton.pixelOffset.y * 2.5f;
+		head.relativeOffset.x = -0.05f;
 		table.padding = new Vector2(10, 5);
-		var scrollPanel = body.GetComponentInChildren<UIPanel>();
-		dragPanel = scrollPanel.GetComponent<UIDraggablePanel>();
-		scrollPanel.clipping = UIDrawCall.Clipping.SoftClip;
-		scrollPanel.clipSoftness = new Vector2(1f, 10f);
-		var clipHeight = Screen.height - Mathf.Abs( head.pixelOffset.y * 2f );
-		scrollPanel.clipRange =
-			new Vector4(Screen.width/2f, -Screen.height/2f, Screen.width, clipHeight);
-		dragPanel.RestrictWithinBounds(true);
+		SetUpScrollPanel(Mathf.Abs(backButton.pixelOffset.y * 2f));
+//		var scrollPanel = body.GetComponentInChildren<UIPanel>();
+//		dragPanel = scrollPanel.GetComponent<UIDraggablePanel>();
+//		scrollPanel.clipping = UIDrawCall.Clipping.SoftClip;
+//		scrollPanel.clipSoftness = new Vector2(1f, 10f);
+//		var clipHeight = Screen.height - Mathf.Abs( head.pixelOffset.y * 2f );
+//		scrollPanel.clipRange =
+//			new Vector4(Screen.width/2f, -Screen.height/2f, Screen.width, clipHeight);
+//		dragPanel.RestrictWithinBounds(true);
 	}
 	
 	private void SetUpContents() {
@@ -58,13 +59,18 @@ public class PlaysetElementsSubPage : TableBodySubPage {
 	{
 		if (anchor == head) {
 			var label = anchor.GetComponentInChildren<UILabel>();
-			if (label != null) return label;
+			if (label == null) {
+				label = base.AddLabel (anchor, prefab);
+				label.pivot = UIWidget.Pivot.Right;
+				label.transform.localPosition = Vector3.zero;
+			}
+			return label;
 		}
-		return base.AddLabel (anchor, prefab);
+		return base.AddLabel(anchor, prefab);
 	}
 	
-	public void RespectBounds() {
-		if (dragPanel != null)
-			dragPanel.RestrictWithinBounds(true);
-	}
+//	public void RespectBounds() {
+//		if (dragPanel != null)
+//			dragPanel.RestrictWithinBounds(true);
+//	}
 }

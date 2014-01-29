@@ -34,7 +34,7 @@ public class PageMap : MonoBehaviour {
 	
 	public virtual GameObject AddContent(UIAnchor anchor, GameObject prefab) {
 		var content = NGUITools.AddChild(anchor.gameObject, prefab);
-		if (anchor != body) {
+		if (anchor == GetAnchor(anchor.side)) {
 			CorrectOffsets(anchor);
 		}
 		return content;

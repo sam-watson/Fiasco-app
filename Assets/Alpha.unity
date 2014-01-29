@@ -1073,14 +1073,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   mColor: {r: 1, g: 1, b: 1, a: 1}
   mPivot: 4
-  mWidth: 57
+  mWidth: 127
   mHeight: 16
   mDepth: 3
   autoResizeBoxCollider: 0
   keepCrispWhenShrunk: 1
   mTrueTypeFont: {fileID: 12800000, guid: 864d99568b2f04943a55a1d573d0c321, type: 3}
   mFont: {fileID: 0}
-  mText: play!
+  mText: The Setup
   mFontSize: 16
   mFontStyle: 0
   mEncoding: 1
@@ -1851,6 +1851,14 @@ Prefab:
       propertyPath: uiCamera
       value: 
       objectReference: {fileID: 935566763}
+    - target: {fileID: 11400066, guid: b048920ab16bf484ba6bc33a16f814ba, type: 2}
+      propertyPath: mWidth
+      value: 127
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400066, guid: b048920ab16bf484ba6bc33a16f814ba, type: 2}
+      propertyPath: mText
+      value: The Setup
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: b048920ab16bf484ba6bc33a16f814ba, type: 2}
   m_RootGameObject: {fileID: 215418235}

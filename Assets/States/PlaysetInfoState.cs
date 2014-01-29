@@ -53,49 +53,12 @@ public class PlaysetInfoState : State {
 			var playset = playsets[ i ];
 			var subPage = NGUITools.AddChild(playsetPanel.gameObject, context.manager.prefabs.playsetSubPage).transform;
 			subPage.localPosition = new Vector3(i*Screen.width, 0, 0);
-			var subPageMap = subPage.gameObject.GetComponent<PlaysetInfoSubPage>();
-			SetUpSubPage(subPageMap, playset);
+			var subPageMap = subPage.GetComponent<PlaysetInfoSubPage>();
+			subPageMap.playset = playset;
 			subPages.Add(playset.name, subPageMap);
 			ShowInfo(subPageMap, false, 0);
 		}
 		setUp = true;
-	}
-	
-	private void SetUpSubPage(PlaysetInfoSubPage subPage, Playset playset) {
-		subPage.name = playset.name;
-		Debug.Log("Setting up "+ playset.name);
-		var hitchcockLabel = initialContext.manager.prefabs.styledLabel;
-		var plainLabel = initialContext.manager.prefabs.plainLabel;
-		//background
-		subPage.background.spriteName = "bg " + playset.name;
-		//header
-		var title = AddLabel(subPage, subPage.head, hitchcockLabel);
-		title.text = playset.name;
-		title.effectStyle = UILabel.Effect.Outline;
-		title.color = Color.red;
-		title.fontSize = 26;
-		//body
-		var body = subPage.body;
-		var subtitle = AddLabel(subPage, body, hitchcockLabel);
-		subtitle.text = playset.info.subtitle;
-		subtitle.fontSize = 22;
-		var summary = AddLabel(subPage, body, plainLabel);
-		summary.text = playset.info.summary;
-		summary.fontSize = 22;
-		var movienight = AddLabel(subPage, body, hitchcockLabel);
-		movienight.text = "Movie Night:";
-		movienight.fontSize = 22;
-		var movies = AddLabel(subPage, body, plainLabel);
-		movies.text = playset.info.movienight;
-		movies.fontSize = 22;
-		movies.fontStyle = FontStyle.Italic;
-		var credits = AddLabel(subPage, body, plainLabel);
-		credits.text = "CREDITS: " + playset.info.credits;
-		credits.fontSize = 22;
-	}
-	
-	private UILabel AddLabel(PageMap page, UIAnchor anchor, GameObject prefab) {
-		return page.AddLabel(anchor, prefab);
 	}
 	
 	private void ShowInfo(PlaysetInfoSubPage subPage, bool on, float speed) {
