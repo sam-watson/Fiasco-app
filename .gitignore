@@ -3,6 +3,7 @@ Build/
 obj/
 Temp/
 UnityVS*
+*.apk
 *.booproj
 *.csproj
 *.Dotsettings
