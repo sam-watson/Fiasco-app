@@ -20,14 +20,6 @@ public class PlaysetElementsSubPage : TableBodySubPage {
 		head.relativeOffset.x = -0.05f;
 		table.padding = new Vector2(10, 5);
 		SetUpScrollPanel(Mathf.Abs(backButton.pixelOffset.y * 2f));
-//		var scrollPanel = body.GetComponentInChildren<UIPanel>();
-//		dragPanel = scrollPanel.GetComponent<UIDraggablePanel>();
-//		scrollPanel.clipping = UIDrawCall.Clipping.SoftClip;
-//		scrollPanel.clipSoftness = new Vector2(1f, 10f);
-//		var clipHeight = Screen.height - Mathf.Abs( head.pixelOffset.y * 2f );
-//		scrollPanel.clipRange =
-//			new Vector4(Screen.width/2f, -Screen.height/2f, Screen.width, clipHeight);
-//		dragPanel.RestrictWithinBounds(true);
 	}
 	
 	private void SetUpContents() {
@@ -68,9 +60,4 @@ public class PlaysetElementsSubPage : TableBodySubPage {
 		}
 		return base.AddLabel(anchor, prefab);
 	}
-	
-//	public void RespectBounds() {
-//		if (dragPanel != null)
-//			dragPanel.RestrictWithinBounds(true);
-//	}
 }

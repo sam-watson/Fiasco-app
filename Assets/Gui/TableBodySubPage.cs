@@ -9,11 +9,6 @@ public class TableBodySubPage : PageMap {
 	protected float headerMargin;
 	protected float footerMargin;
 	
-	public override void Awake () {
-		base.Awake ();
-		
-	}
-	
 	public override void Start () {
 		base.Start();
 		dragPanel = body.gameObject.GetComponentInChildren<UIDraggablePanel>();

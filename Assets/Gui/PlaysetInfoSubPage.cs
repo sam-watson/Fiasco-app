@@ -5,12 +5,20 @@ using System.Collections.Generic;
 public class PlaysetInfoSubPage : TableBodySubPage {
 	
 	public Playset playset;
+	private bool repos;
 	
 	public override void Start() {
 		base.Start();
 		PositionStuff();
 		if (playset != null) {
 			SetUpContents();
+		}
+	}
+	
+	void Update() {
+		if (repos) {
+			table.Reposition();
+			repos = false;
 		}
 	}
 	
@@ -22,17 +30,6 @@ public class PlaysetInfoSubPage : TableBodySubPage {
 		head.relativeOffset.x = 0.05f;
 		table.padding = new Vector2(10, 5);
 		SetUpScrollPanel(Mathf.Abs(backButton.pixelOffset.y * 2f));
-		//place body below header
-//		//body.pixelOffset.y += head.pixelOffset.y *2;
-//		table.padding = new Vector2(10, 5);
-//		var scrollPanel = body.GetComponentInChildren<UIPanel>();
-//		var dragPanel = scrollPanel.GetComponent<UIDraggablePanel>();
-//		scrollPanel.clipping = UIDrawCall.Clipping.SoftClip;
-//		scrollPanel.clipSoftness = new Vector2(1f, 10f);
-//		var clipHeight = Screen.height - Mathf.Abs( backButton.pixelOffset.y * 4f );
-//		scrollPanel.clipRange =
-//			new Vector4(Screen.width/2f, -Screen.height/2f, Screen.width, clipHeight);
-		//dragPanel.RestrictWithinBounds(true);
 	}
 	
 	private void SetUpContents() {
@@ -66,7 +63,7 @@ public class PlaysetInfoSubPage : TableBodySubPage {
 		var credits = AddLabel(body, plainLabel);
 		credits.text = "CREDITS: " + playset.info.credits;
 		credits.fontSize = 22;
-		
+		repos = true;
 	}
 }
 
