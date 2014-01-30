@@ -2,7 +2,7 @@
 using System.Collections;
 using System.Collections.Generic;
 
-public class PlaysetInfoSubPage : TableBodySubPage {
+public class PlaysetInfoSubPage : ScrollBodySubPage {
 	
 	public Playset playset;
 	private bool repos;

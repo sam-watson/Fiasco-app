@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class TableBodySubPage : PageMap {
+public class ScrollBodySubPage : PageMap {
 	
 	protected UIDraggablePanel dragPanel;
 	protected UIPanel panel;

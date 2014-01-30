@@ -4,7 +4,7 @@ using System.Collections.Generic;
 
 public class ExpandingButton : Button {
 	
-	private TableBodySubPage scrollPage;
+	private ScrollBodySubPage scrollPage;
 	private GameObject subPrefab;
 	private UITable subTable;
 	private List<string> subText;
@@ -26,7 +26,7 @@ public class ExpandingButton : Button {
 		if (subText != null) {
 			SetSubText(subText, subPrefab);
 		}
-		scrollPage = NGUITools.FindInParents<TableBodySubPage>(gameObject);
+		scrollPage = NGUITools.FindInParents<ScrollBodySubPage>(gameObject);
 	}
 	
 	public void SetSubText(List<string> textList) {

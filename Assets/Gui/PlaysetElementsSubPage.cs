@@ -2,7 +2,7 @@
 using System.Collections;
 using System.Collections.Generic;
 
-public class PlaysetElementsSubPage : TableBodySubPage {
+public class PlaysetElementsSubPage : ScrollBodySubPage {
 	
 	private List<ExpandingButton> elementLabels = new List<ExpandingButton>();
 	private Dictionary<string, List<string>> elements;
