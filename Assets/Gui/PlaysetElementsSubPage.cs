@@ -19,6 +19,7 @@ public class PlaysetElementsSubPage : ScrollBodySubPage {
 		head.pixelOffset.y = backButton.pixelOffset.y * 2.5f;
 		head.relativeOffset.x = -0.05f;
 		table.padding = new Vector2(10, 5);
+		table.sorted = true;
 		SetUpScrollPanel(Mathf.Abs(backButton.pixelOffset.y * 2f));
 	}
 	
@@ -40,10 +41,10 @@ public class PlaysetElementsSubPage : ScrollBodySubPage {
 			var expLabel = elementLabels[i];
 			var expLabelLabel = expLabel.GetComponentInChildren<NumberedLabel>();
 			expLabelLabel.LabelText = elementList.Key;
-			expLabelLabel.Number = i+1;
+			expLabelLabel.Number = ++i; //increment
+			expLabel.name = i.ToString();
 			expLabel.SetSubText(elementList.Value);
 			expLabel.SetStretch(true, Button.StretchType.Pixel, table.padding*2f);
-			i++;
 		}
 		ScrollToTop();
 	}
