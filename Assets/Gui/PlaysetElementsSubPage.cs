@@ -45,6 +45,7 @@ public class PlaysetElementsSubPage : TableBodySubPage {
 			expLabel.SetStretch(true, Button.StretchType.Pixel, table.padding*2f);
 			i++;
 		}
+		ScrollToTop();
 	}
 	
 	public override UILabel AddLabel (UIAnchor anchor, GameObject prefab)

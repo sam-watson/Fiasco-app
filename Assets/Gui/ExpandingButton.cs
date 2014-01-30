@@ -4,8 +4,7 @@ using System.Collections.Generic;
 
 public class ExpandingButton : Button {
 	
-	private UIDraggablePanel dragPanel;
-	private UIPanel panel;
+	private TableBodySubPage scrollPage;
 	private GameObject subPrefab;
 	private UITable subTable;
 	private List<string> subText;
@@ -27,8 +26,7 @@ public class ExpandingButton : Button {
 		if (subText != null) {
 			SetSubText(subText, subPrefab);
 		}
-		dragPanel = NGUITools.FindInParents<UIDraggablePanel>(gameObject);
-		panel = dragPanel.panel;
+		scrollPage = NGUITools.FindInParents<TableBodySubPage>(gameObject);
 	}
 	
 	public void SetSubText(List<string> textList) {
@@ -88,16 +86,19 @@ public class ExpandingButton : Button {
 	
 	public void TweenToggleOn() {
 		var bounds = NGUIMath.CalculateAbsoluteWidgetBounds(tweenTrans);
-		if (!panel.IsVisible(bounds.min)) {
-			var panTrans = panel.transform;
-			var toPos = new Vector3(panTrans.localPosition.x, panTrans.localPosition.y + tableSize +10f, 0);
-			//Debug.Log("MOVE THE FUCK " + panTrans.localPosition + " TO " + toPos);
-			SpringPanel.Begin(panel.gameObject, toPos, 10f);
+		if (scrollPage != null && !scrollPage.IsVisible(bounds.min)) {
+			scrollPage.ScrollToBottom();
+//			var panTrans = panel.transform;
+//			var toPos = new Vector3(panTrans.localPosition.x, panTrans.localPosition.y + tableSize +10f, 0);
+//			//Debug.Log("MOVE THE FUCK " + panTrans.localPosition + " TO " + toPos);
+//			SpringPanel.Begin(panel.gameObject, toPos, 10f);
 		}
 		tween.onFinished.Clear();
 	}
 	
 	public void RespectBounds() {
-		dragPanel.RestrictWithinBounds(false);
+		if (scrollPage != null) {
+			scrollPage.ConstrainContents();
+		}
 	}
 }

@@ -62,7 +62,6 @@ public class PlaysetElementsState : State {
 			topLabel.effectColor = Color.red;
 			var elements = playset.elements.GetElements(elementType);
 			subPage.SetElements(elements);
-			//subPage.RespectBounds();
 		}
 	}
 	

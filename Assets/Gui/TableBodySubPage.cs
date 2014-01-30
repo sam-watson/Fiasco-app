@@ -6,6 +6,8 @@ public class TableBodySubPage : PageMap {
 	protected UIDraggablePanel dragPanel;
 	protected UIPanel panel;
 	protected UITable table;
+	protected float clipHeight;
+	protected float clipFade;
 	protected float headerMargin;
 	protected float footerMargin;
 	
@@ -24,16 +26,31 @@ public class TableBodySubPage : PageMap {
 		headerMargin = hMargin;
 		footerMargin = fMargin;
 		panel.clipping = UIDrawCall.Clipping.SoftClip;
-		panel.clipSoftness = new Vector2(1f, 10f);
-		var clipHeight = Screen.height - headerMargin - footerMargin;
+		clipFade = 10f;
+		panel.clipSoftness = new Vector2(1f, clipFade);
+		clipHeight = Screen.height - headerMargin - footerMargin;
 		var clipMid = -(headerMargin + clipHeight/2f);
 		panel.clipRange = new Vector4(Screen.width/2f, clipMid, Screen.width, clipHeight);
-		RepositScrollPanel();
+		ScrollToTop();
 	}
 	
-	protected void RepositScrollPanel() {
-		var toPos = new Vector3(0f, -headerMargin, 0f);
+	public void ScrollToTop() {
+		var toPos = new Vector3(1f, -(headerMargin + clipFade), 0f);
 		SpringPanel.Begin(panel.gameObject, toPos, 10f);
+	}
+	
+	public void ScrollToBottom() {
+		var extraLength = NGUIMath.CalculateRelativeWidgetBounds(panel.transform).size.y - clipHeight;
+		var toPos = new Vector3(1f, (extraLength - headerMargin + clipFade), 0f);
+		SpringPanel.Begin(panel.gameObject, toPos, 10f);
+	}
+	
+	public void ConstrainContents() {
+		dragPanel.RestrictWithinBounds(false);
+	}
+	
+	public bool IsVisible(Vector3 worldPos) {
+		return panel.IsVisible(worldPos);
 	}
 	
 	public override GameObject AddContent (UIAnchor anchor, GameObject prefab)
@@ -45,13 +62,5 @@ public class TableBodySubPage : PageMap {
 		} else {
 			return base.AddContent(anchor, prefab);
 		}
-	}
-	
-	public override Transform GetTrans (UIAnchor angkor)
-	{
-		if (angkor == head) return head.transform;
-		if (angkor == body) return table.transform;
-		if (angkor == foot) return foot.transform;
-		return base.GetTrans (angkor);
 	}
 }
