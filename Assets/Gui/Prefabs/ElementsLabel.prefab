@@ -518,7 +518,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   tweenTarget: {fileID: 100008}
   hover: {r: .843283594, g: .747785985, b: .623022974, a: .215686277}
-  pressed: {r: .5, g: .5, b: .5, a: 1}
+  pressed: {r: .839215696, g: .745098054, b: .619607866, a: .219607845}
   duration: .200000003
   disabledColor: {r: .5, g: .5, b: .5, a: 1}
   onClick: []
