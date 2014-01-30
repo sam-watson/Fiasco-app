@@ -58,6 +58,7 @@ public class PlaysetElementsState : State {
 			var elementType = (PlaysetElements.ElementType)i;
 			var topLabel = subPage.AddLabel(subPage.head, prefabs.styledLabel);
 			topLabel.text = elementType.ToString();
+			topLabel.fontSize = 18;
 			topLabel.effectStyle = UILabel.Effect.Shadow;
 			topLabel.effectColor = Color.red;
 			var elements = playset.elements.GetElements(elementType);
