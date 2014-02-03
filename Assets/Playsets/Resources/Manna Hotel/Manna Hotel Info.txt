@@ -1,5 +1,6 @@
 {
 	"subtitle": "AN OASIS FOR WEARY TRAVELERS",
+	"subSubtitle": "",
 	"summary": "The Manna Hotel is three miles north of Manna, Kansas, population 1,200.
 
 The Manna Hotel is a twenty-room motor lodge with its own in-ground swimming pool, now unused. The hotel burned down and was rebuilt in the fifties. Wood paneling and window-unit air conditioners were installed in the seventies, and it looks like that's the last maintenance anyone did to the place.

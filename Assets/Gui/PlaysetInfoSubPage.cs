@@ -49,20 +49,36 @@ public class PlaysetInfoSubPage : ScrollBodySubPage {
 		//body
 		var subtitle = AddLabel(body, hitchcockLabel);
 		subtitle.text = playset.info.subtitle;
+		subtitle.effectStyle = UILabel.Effect.Outline;
+		subtitle.effectColor = Color.Lerp(Color.red, Color.black, 0.3f);
+		subtitle.effectDistance = new Vector2(2, 1);
 		subtitle.fontSize = 22;
+		if (playset.info.subSubtitle.Length > 0) {
+			var subsub = AddLabel(body, hitchcockLabel);
+			subsub.text = playset.info.subSubtitle;
+			subsub.effectStyle = UILabel.Effect.Outline;
+			subsub.effectColor = Color.Lerp(Color.red, Color.black, 0.3f);
+			subsub.effectDistance = new Vector2(2, 1);
+			subsub.fontSize = 22;
+		}
 		var summary = AddLabel(body, plainLabel);
 		summary.text = playset.info.summary;
 		summary.fontSize = 22;
 		var movienight = AddLabel(body, hitchcockLabel);
 		movienight.text = "Movie Night:";
-		movienight.fontSize = 22;
+		movienight.effectStyle = UILabel.Effect.Shadow;
+		movienight.effectColor = Color.Lerp(Color.red, Color.black, 0.3f);
+		movienight.fontSize = 20;
 		var movies = AddLabel(body, plainLabel);
 		movies.text = playset.info.movienight;
-		movies.fontSize = 22;
+		movies.fontSize = 20;
 		movies.fontStyle = FontStyle.Italic;
-		var credits = AddLabel(body, plainLabel);
-		credits.text = "CREDITS: " + playset.info.credits;
-		credits.fontSize = 22;
+		var credits = AddLabel(body, hitchcockLabel);
+		credits.text = "CREDITS:";
+		credits.fontSize = 14;
+		var creds = AddLabel(body, plainLabel);
+		creds.text = playset.info.credits;
+		creds.fontSize = 16;
 		repos = true;
 	}
 }

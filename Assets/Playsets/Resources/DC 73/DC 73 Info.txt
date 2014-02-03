@@ -1,6 +1,6 @@
 {
-	"subtitle": "Finishing second in the Olympics gets you silver. Finishing second in politics gets you oblivion.
--Richard M. NixoN",
+	"subtitle": "Finishing second in the Olympics gets you silver. Finishing second in politics gets you oblivion.",
+	"subSubtitle": "-Richard M. NixoN",
 	"summary": "With a war in Southeast Asia, unrest at home, and the evidence in the Watergate scandal reaching closer and closer to the goddamn President of the United States, the political landscape in Washington D.C. buckles and shifts daily. It's a good time to be young and hungry. It's a good time to be ruthless. And it's a good time to know some secrets.
 
 Deals are made on both sides of the Iron Curtain, and Capitol Hill insiders are willing to risk anything—from public disgrace to nuclear Armageddon—for a big payout or a State Department gig. So in the name of Nixon or Brezhnev or Abbie Hoffman or John Wayne, make the system work for you or tear it the hell down.",

@@ -14,6 +14,7 @@ public class Playset {
 public class PlaysetInfo {
 	
 	public string subtitle;
+	public string subSubtitle;
 	public string summary;
 	public string movienight;
 	public string credits;

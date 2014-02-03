@@ -1,5 +1,6 @@
 {
 	"subtitle": "The Buckle ON THE BIBLE BELT",
+	"subSubtitle": "",
 	"summary": "Flyover is all about Middle America - hard-working agribusiness pro­fessionals, construction contractors, Mexican drug mules and the peo­ple who love them. It's the God-and-country heartland, where high school football is the best bet for a Friday night date and everybody knows everybody.
 
 With corn and soybean fields stretching for miles in every direction, the endless sky punctuated only by enormous grain elevators, things can get a little squirrelly.",
